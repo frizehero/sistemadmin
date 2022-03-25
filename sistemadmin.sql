@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Feb 2021 pada 19.09
--- Versi server: 10.1.35-MariaDB
--- Versi PHP: 7.2.9
+-- Generation Time: Mar 25, 2022 at 07:49 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,39 +18,41 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `rsudbangil`
+-- Database: `sistemadmin`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_login`
+-- Table structure for table `tb_login`
 --
 
 CREATE TABLE `tb_login` (
   `id_admin` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `status` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_login`
+-- Dumping data for table `tb_login`
 --
 
-INSERT INTO `tb_login` (`id_admin`, `nama`, `username`, `password`) VALUES
-(1, 'Daus', 'simrsbangil', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
+INSERT INTO `tb_login` (`id_admin`, `nama`, `username`, `password`, `status`, `created_at`) VALUES
+(1, 'Uta', 'admin', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 1, '2022-03-25 06:49:02');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user_level`
+-- Table structure for table `user_level`
 --
 
 CREATE TABLE `user_level` (
   `id_level` int(11) NOT NULL,
   `nama_level` varchar(100) DEFAULT NULL,
-  `create_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+  `create_date` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -59,29 +60,29 @@ CREATE TABLE `user_level` (
 --
 
 --
--- Indeks untuk tabel `tb_login`
+-- Indexes for table `tb_login`
 --
 ALTER TABLE `tb_login`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indeks untuk tabel `user_level`
+-- Indexes for table `user_level`
 --
 ALTER TABLE `user_level`
   ADD PRIMARY KEY (`id_level`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tb_login`
+-- AUTO_INCREMENT for table `tb_login`
 --
 ALTER TABLE `tb_login`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `user_level`
+-- AUTO_INCREMENT for table `user_level`
 --
 ALTER TABLE `user_level`
   MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT;
