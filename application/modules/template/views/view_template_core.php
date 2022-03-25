@@ -836,37 +836,186 @@ $menu = $uri_segments[2];
 
                              <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
                                        <a href="<?php echo base_url('beranda'); ?>">
-                                           <i class="metismenu-icon pe-7s-rocket"></i>Dashboard
+                                           <i class="metismenu-icon pe-7s-rocket"></i>Beranda
                                         </a>
                                     </li>
 
-
-                            <li >
+<li >
                                 <a href="#" >
-                                    <i class="metismenu-icon pe-7s-browser"></i>Inventaris
+                                    <i class="metismenu-icon pe-7s-browser"></i>JOB NUMBER
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul class="mm-collapse mm-show">
 
                                      <?php if ($menu=="inventory_peralatan"){?><li class="mm-active"><?php }else{?><li><?php }?>
                                        <a href="<?php echo base_url('inventory_peralatan'); ?>">
-                                           <i class="metismenu-icon"></i>Peralatan & Mesin
+                                           <i class="metismenu-icon"></i>KODE C02
                                         </a>
                                     </li>
 
-                                  
+                                     <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                                           <i class="metismenu-icon"></i>KODE D02
+                                        </a>
+                                    </li>
+
+                                    <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                                           <i class="metismenu-icon"></i>LAPORAN PENGELUARAN
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </li>
+
+<li >
+                                <a href="#" >
+                                    <i class="metismenu-icon pe-7s-browser"></i>UANG MUKA
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul class="mm-collapse mm-show">
+
+                                     <?php if ($menu=="inventory_peralatan"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('inventory_peralatan'); ?>">
+                                           <i class="metismenu-icon"></i>UANG MUKA OPERASIONAL
+                                        </a>
+                                    </li>
+
+                                     <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                                           <i class="metismenu-icon"></i>UANG MUKA DRIVER
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+</li>
+                           
+
+                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('beranda'); ?>">
+                                           <i class="metismenu-icon pe-7s-rocket"></i>KLAIM BIAYA SURVEY
+                                        </a>
+                                    </li>
+</li>
+                           
+
+                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('beranda'); ?>">
+                                           <i class="metismenu-icon pe-7s-rocket"></i>KLAIM BIAYA DRIVER
+                                        </a>
+                                    </li>
+
+<li >
+                                
+<li >
+                                <a href="#" >
+                                    <i class="metismenu-icon pe-7s-browser"></i>KLAIM BIAYA TRANSPORTASI
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul class="mm-collapse mm-show">
+
+                                     <?php if ($menu=="inventory_peralatan"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('inventory_peralatan'); ?>">
+                                           <i class="metismenu-icon"></i>RENT CAR
+                                        </a>
+                                    </li>
+
+                                     <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                                           <i class="metismenu-icon"></i>SPEEDBOAT
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+</li>
+                           
+
+                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('beranda'); ?>">
+                                           <i class="metismenu-icon pe-7s-rocket"></i>LAPORAN KEUANGAN
+                                        </a>
+                                    </li>
+
+</li>
+                           
+
+                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('beranda'); ?>">
+                                           <i class="metismenu-icon pe-7s-rocket"></i>JOB COST
+                                        </a>
+                                    </li>
+
+
+</li>
+                           
+
+                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('beranda'); ?>">
+                                           <i class="metismenu-icon pe-7s-rocket"></i>ANALISIS COST
+                                        </a>
+                                    </li>
+
+</li>
+                           
+
+                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('beranda'); ?>">
+                                           <i class="metismenu-icon pe-7s-rocket"></i>DATA KARYAWAN
+                                        </a>
+                                    </li>                                    
+
+
+</li>
+                           
+
+                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('beranda'); ?>">
+                                           <i class="metismenu-icon pe-7s-rocket"></i>DATA VENDOR
+                                        </a>
+                                    </li>
+</li>
+
+                             
+
 							
-                             <li class="app-sidebar__heading">Data</li>
+                             <li class="app-sidebar__heading">DATA</li>
 
                              <?php if ($menu=="inventory_room"){?><li class="mm-active"><?php }else{?><li><?php }?>
                                        <a href="<?php echo base_url('inventory_room'); ?>">
-                                           <i class="metismenu-icon pe-7s-airplay"></i>Ruangan
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Data Divisi
+                                        </a>
+
+                                        <a href="<?php echo base_url('inventory_room'); ?>">
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Data Jabatan
+                                        </a>
+
+                                        <a href="<?php echo base_url('inventory_room'); ?>">
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Barges / Vessel
                                         </a>
                                     </li>
                              
+</li>
                            
+
+                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('beranda'); ?>">
+                                           <i class="metismenu-icon pe-7s-rocket"></i>KELOLA PENGGUNA
+                                        </a>
+                                    </li>        
+
+                                    </li>
+                           
+
+                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('beranda'); ?>">
+                                           <i class="metismenu-icon pe-7s-rocket"></i>KELUAR
+                                        </a>
+                                    </li>                           
+                             
+
+
                         </ul>
                     </div>
                 </div>
