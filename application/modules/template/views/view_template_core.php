@@ -982,12 +982,12 @@ $menu = $uri_segments[2];
 							
                              <li class="app-sidebar__heading">DATA</li>
 
-                             <?php if ($menu=="inventory_room"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('inventory_room'); ?>">
+                             <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('data_divisi'); ?>">
                                            <i class="metismenu-icon pe-7s-airplay"></i>Data Divisi
                                         </a>
 
-                                        <a href="<?php echo base_url('inventory_room'); ?>">
+                                        <a href="<?php echo base_url('data_jabatan'); ?>">
                                            <i class="metismenu-icon pe-7s-airplay"></i>Data Jabatan
                                         </a>
 
