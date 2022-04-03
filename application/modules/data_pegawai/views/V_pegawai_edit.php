@@ -5,7 +5,7 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>Ubah Data Ruangan
+                                    <div>Ubah Data Pegawai
                                         <div class="page-title-subheading">Ubah Data Ruangan, Silahkan Isi semua form di bawah ini dengan lengkap...</div>
                                     </div>
                                 </div>
@@ -26,19 +26,50 @@
 
                                              <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Kode Ruangan</label>
+                                                    <label class="">Nama Pegawai</label>
                                                     <input name="nama_pegawai" value="<?php echo $tampil['nama_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Nama Ruangan</label>
+                                                    <label class="">Keterangan Pegawai</label>
                                                     <input name="ket_pegawai" value="<?php echo $tampil['ket_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                         
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">NIK Pegawai</label>
+                                                    <input name="nik_pegawai" value="<?php echo $tampil['nik_pegawai']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Telepon Pegawai</label>
+                                                    <input name="telepon_pegawai" value="<?php echo $tampil['telepon_pegawai']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Alamat Pegawai</label>
+                                                    <input name="rumah_pegawai" value="<?php echo $tampil['rumah_pegawai']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Email</label>
+                                                    <input name="email_pegawai" value="<?php echo $tampil['email_pegawai']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+
+
+
                                                 </div>
                                             </div>
                                             

@@ -12,12 +12,20 @@ class M_data_pegawai extends CI_Model {
 	{
 		$nama_pegawai 		= $this->input->post('nama_pegawai');
 		$ket_pegawai 		= $this->input->post('ket_pegawai');
-		
+		$nik_pegawai 		= $this->input->post('nik_pegawai');
+		$telepon_pegawai 	= $this->input->post('telepon_pegawai');
+		$rumah_pegawai 		= $this->input->post('rumah_pegawai');
+		$email_pegawai 		= $this->input->post('email_pegawai');
+
 
 				$data = array(
 					'nama_pegawai'		=> $nama_pegawai,
 					'ket_pegawai'		=> $ket_pegawai,
-					
+					'nik_pegawai'		=> $nik_pegawai,
+					'telepon_pegawai'	=> $telepon_pegawai,
+					'rumah_pegawai'		=> $rumah_pegawai,
+					'email_pegawai'		=> $email_pegawai,
+
 				);
 				$this->db->insert('data_pegawai', $data);
 				$this->session->set_flashdata('msg', 'suksestambah');
@@ -35,14 +43,21 @@ class M_data_pegawai extends CI_Model {
 
 	function edit()
 	{
-		$id 		= $this->input->post('id');
+		$id 				= $this->input->post('id');
 		$nama_pegawai 		= $this->input->post('nama_pegawai');
 		$ket_pegawai 		= $this->input->post('ket_pegawai');
+		$nik_pegawai 		= $this->input->post('nik_pegawai');
+		$telepon_pegawai 	= $this->input->post('telepon_pegawai');
+		$rumah_pegawai 		= $this->input->post('rumah_pegawai');
+		$email_pegawai 		= $this->input->post('email_pegawai');
 
 				$data = array(
 					'nama_pegawai'		=> $nama_pegawai,
 					'ket_pegawai'		=> $ket_pegawai,
-					
+					'nik_pegawai'		=> $nik_pegawai,
+					'telepon_pegawai'	=> $telepon_pegawai,
+					'rumah_pegawai'		=> $rumah_pegawai,
+					'email_pegawai'		=> $email_pegawai,
 				);
 				$this->db->where('id_data_pegawai',$id)->update('data_pegawai', $data);
 				$this->session->set_flashdata('msg', 'suksesedit');
