@@ -72,13 +72,13 @@
                             </button>
                           </div>
 
-                          <form action="<?php echo base_url('inventory_room/hapus') ?>" method="POST" enctype="multipart/form-data">
+                          <form action="<?php echo base_url('data_pegawai/hapus') ?>" method="POST" enctype="multipart/form-data">
                           <div class="modal-body">
                              <!--Modal body-->
                                 <p class="text-semibold text-main"></p>
-                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->nama_room ?></b> ? </p>
+                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->nama_pegawai ?></b> ? </p>
 
-                                <input name="id"  type="hidden" value="<?php echo $rowP->id_inv_room ?>" class="form-control">
+                                <input name="id"  type="hidden" value="<?php echo $rowP->id_data_pegawai ?>" class="form-control">
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">tutup</button>
