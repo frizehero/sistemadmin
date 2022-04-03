@@ -45,6 +45,19 @@ class Data_divisi extends MX_Controller {
 		echo Modules::run('template/tampilCore', $data);
 	}
 
+		// Halaman Edit
+	function listview($id)
+	{
+
+		$data = array(
+			'namamodule' 	=> "data_divisi",
+			'namafileview' 	=> "V_listview",
+			'tampil'		=> $this->M_data_divisi->tampiledit($id),
+			'tampillist'		=> $this->M_data_divisi->tampillist($id),
+		);
+		echo Modules::run('template/tampilCore', $data);
+	}
+
 
 	function tambah()
 	{
@@ -53,6 +66,15 @@ class Data_divisi extends MX_Controller {
 		redirect('data_divisi');
 		
 		//redirect('data_divisi');
+	}
+
+	function tambah_subdivisi()
+	{
+		$id 		= $this->input->post('id');
+
+		$this->M_data_divisi->tambah_subdivisi();
+		redirect('data_divisi/listview/'.encrypt_url($id));
+		
 	}
 
 	function edit()
@@ -65,6 +87,15 @@ class Data_divisi extends MX_Controller {
 	{
 		$this->M_data_divisi->hapus();
 		redirect('data_divisi');
+	}
+
+
+	function hapus_subdivisi()
+	{
+		$id_divisi 		= $this->input->post('id_divisi');
+		
+		$this->M_data_divisi->hapus_subdivisi();
+		redirect('data_divisi/listview/'.encrypt_url($id_divisi));
 	}
 	
 }

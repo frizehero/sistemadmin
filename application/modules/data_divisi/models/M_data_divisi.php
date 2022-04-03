@@ -23,11 +23,33 @@ class M_data_divisi extends CI_Model {
 			
 	}
 
+	function tambah_subdivisi()
+	{
+		$list_nama_data_divisi 		= $this->input->post('list_nama_data_divisi');
+		$id 		= $this->input->post('id');
+		
+
+				$data = array(
+					'id_data_divisi'		=> $id,
+					'nama_list_data_divisi'		=> $list_nama_data_divisi,
+				);
+				$this->db->insert('list_data_divisi', $data);
+				$this->session->set_flashdata('msg', 'suksestambah');
+			
+	}
+
 	function tampiledit($id)
 	{
 		$idnya=decrypt_url($id);
 		$this->db->where('id_data_divisi',$idnya);
     	return $this->db->get('data_divisi')->row_array();
+	}
+
+	function tampillist($id)
+	{
+		$idnya=decrypt_url($id);
+		$this->db->where('id_data_divisi',$idnya);
+    	return $this->db->get('list_data_divisi')->result();
 	}
 
 
@@ -53,6 +75,12 @@ class M_data_divisi extends CI_Model {
 	{
 		$id = $this->input->post('id');
 		$this->db->where('id_data_divisi', $id)->delete('data_divisi');
+		$this->session->set_flashdata('msg', 'sukseshapus');
+	}
+	function hapus_subdivisi()
+	{
+		$id = $this->input->post('id');
+		$this->db->where('id_list_data_divisi ', $id)->delete('list_data_divisi');
 		$this->session->set_flashdata('msg', 'sukseshapus');
 	}
 

@@ -5,20 +5,52 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>Data Divisi
-                                        <div class="page-title-subheading">Halaman Manajemen Data Divisi</div>
+                                    <div>Ubah sub divisi <?php echo $tampil['nama_data_divisi']?>
+                                        <div class="page-title-subheading"><?php echo $tampil['ket_data_divisi']?></div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
                                   
-                                  <a href="<?php echo base_url('data_divisi/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
-
+                                 <a href="<?php echo base_url('data_divisi'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Kembali</a>
                                 </div>    </div>
-                        </div>
+                        </div>   
 
-                        <?php tampilnotif()?>
-
+                        <div class="row">
+                        <div class="col-md-6">
                         <div class="main-card mb-3 card">
+
+                            <form action="<?php echo base_url('data_divisi/tambah_subdivisi') ?>" method="POST" enctype="multipart/form-data">
+                                <div class="card-body">
+                                    <h5 class="card-title"></h5>
+                                    <form class="">
+                                        <div class="form-row">
+                                            <input name="id" value="<?php echo $tampil['id_data_divisi']?>" type="hidden" class="form-control">
+
+                                             <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Nama Sub Divisi</label>
+                                                    <input name="list_nama_data_divisi" value="" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                             <button class="mt-2 btn btn-primary"  type="submit" >Simpan Data</button>
+                                          
+
+                                          
+                                        </div>
+                                       
+
+                                        
+                                    </form>
+                                </div>
+
+                                </form>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="main-card mb-3 card">
                             <div class="card-body">
                                 
 
@@ -26,8 +58,7 @@
                                     <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th width="20%">Nama Divisi</th>
-                                        <th width="20%">Keterangan</th>
+                                        <th width="60%">Nama Sub Divisi</th>
                                         <th>Opsi</th>
                                        
                                     </tr>
@@ -37,19 +68,11 @@
                                     <?php  
                                     $no=1;
                                            
-                                    foreach ($tampil AS $rowP ) { ?>
+                                    foreach ($tampillist AS $rowP ) { ?>
                                     <tr>
                                         <td><?php echo $no;?></td>
-                                        <td><?php echo $rowP->nama_data_divisi;?></td>
-                                        <td><?php echo $rowP->ket_data_divisi;?></td>
+                                        <td><?php echo $rowP->nama_list_data_divisi;?></td>
                                         <td>
-                                            <a href="<?php echo base_url('data_divisi/listview/'. encrypt_url($rowP->id_data_divisi)); ?>" class="btn btn-success">
-                                            <i class="fa fa-user fa-w-16"></i>
-                                            </a>
-
-                                            <a href="<?php echo base_url('data_divisi/editview/'. encrypt_url($rowP->id_data_divisi)); ?>" class="btn btn-primary">
-                                            <i class="fa fa-pen fa-w-16"></i>
-                                            </a>
 
                                         <button class="btn btn-warning" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
                                         <i class="fa fa-trash fa-w-16"></i>
@@ -69,13 +92,14 @@
                             </button>
                           </div>
 
-                          <form action="<?php echo base_url('data_divisi/hapus') ?>" method="POST" enctype="multipart/form-data">
+                          <form action="<?php echo base_url('data_divisi/hapus_subdivisi') ?>" method="POST" enctype="multipart/form-data">
                           <div class="modal-body">
                              <!--Modal body-->
                                 <p class="text-semibold text-main"></p>
-                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->nama_data_divisi ?></b> ? </p>
+                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->nama_list_data_divisi ?></b> ? </p>
 
-                                <input name="id"  type="hidden" value="<?php echo $rowP->id_data_divisi ?>" class="form-control">
+                                <input name="id_divisi"  type="hidden" value="<?php echo $rowP->id_data_divisi  ?>" class="form-control">
+                                <input name="id"  type="hidden" value="<?php echo $rowP->id_list_data_divisi  ?>" class="form-control">
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">tutup</button>
@@ -98,7 +122,12 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
-                   
 
-            
+
+
+                            </div>
+</div>
+
+
+
+</div>
