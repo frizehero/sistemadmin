@@ -28,7 +28,7 @@ class Data_divisi extends MX_Controller {
 	{
 		$data = array(
 			'namamodule' 	=> "data_divisi",
-			'namafileview' 	=> "V_tambah",
+			'namafileview' 	=> "V_data_divisi",
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
@@ -38,8 +38,8 @@ class Data_divisi extends MX_Controller {
 	{
 
 		$data = array(
-			'namamodule' 	=> "inventory_room",
-			'namafileview' 	=> "V_room_edit",
+			'namamodule' 	=> "data_divisi",
+			'namafileview' 	=> "V_edit",
 			'tampil'		=> $this->M_inventory_room->tampiledit($id),
 		);
 		echo Modules::run('template/tampilCore', $data);
@@ -49,22 +49,22 @@ class Data_divisi extends MX_Controller {
 	function tambah()
 	{
 
-		$this->M_data_divisi->tambah();
+		$this->M_inventory_room->tambah();
 		redirect('data_divisi');
 		
-		//redirect('inventory_room');
+		//redirect('data_divisi');
 	}
 
 	function edit()
 	{
-		$this->M_inventory_room->edit();
-		redirect('inventory_room');
+		$this->M_data_divisi->edit();
+		redirect('data_divisi');
 	}
 
 	function hapus()
 	{
-		$this->M_inventory_room->hapus();
-		redirect('inventory_room');
+		$this->M_data_divisi->hapus();
+		redirect('data_divisi');
 	}
 	
 }

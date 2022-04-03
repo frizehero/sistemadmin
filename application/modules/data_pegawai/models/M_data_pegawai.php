@@ -1,26 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_data_divisi extends CI_Model {
+class M_data_pegawai extends CI_Model {
 
 	function tampil()
 	{
-		return $this->db->get('data_divisi')->result();
+		return $this->db->get('data_pegawai')->result();
 	}
 
 	function tambah()
 	{
-		$kode 		= $this->input->post('nama divisi');
-		$nama 		= $this->input->post('keterangan');
+		$nama_pegawai 		= $this->input->post('nama_pegawai');
+		$ket_pegawai 		= $this->input->post('ket_pegawai');
 		
 
 				$data = array(
-					'kode_room'		=> $kode,
-					'nama_room'		=> $nama,
-					'pj_room'		=> $pj,
-					'ket_room'		=> $keterangan,
+					'nama_pegawai'		=> $nama_pegawai,
+					'ket_pegawai'		=> $ket_pegawai,
+					
 				);
-				$this->db->insert('data_divisi', $data);
+				$this->db->insert('data_pegawai', $data);
 				$this->session->set_flashdata('msg', 'suksestambah');
 			
 	}
@@ -28,8 +27,8 @@ class M_data_divisi extends CI_Model {
 	function tampiledit($id)
 	{
 		$idnya=decrypt_url($id);
-		$this->db->where('id_inv_room',$idnya);
-    	return $this->db->get('inventory_room')->row_array();
+		$this->db->where('id_data_pegawai',$idnya);
+    	return $this->db->get('data_pegawai')->row_array();
 	}
 
 
@@ -39,8 +38,6 @@ class M_data_divisi extends CI_Model {
 		$id 		= $this->input->post('id');
 		$kode 		= $this->input->post('kode');
 		$nama 		= $this->input->post('nama');
-		$pj			= $this->input->post('pj');
-		$keterangan	= $this->input->post('ket');
 
 				$data = array(
 					'kode_room'		=> $kode,
