@@ -24,6 +24,14 @@
                                         <div class="form-row">
                                             <input name="id" value="<?php echo $tampil['id_data_pegawai']?>" type="hidden" class="form-control">
 
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">NIK Pegawai</label>
+                                                    <input name="nik_pegawai" value="<?php echo $tampil['nik_pegawai']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
                                              <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Nama Pegawai</label>
@@ -38,14 +46,6 @@
                                                 </div>
                                             </div>
 
-                                        
-                                            <div class="col-md-12">
-                                                <div class="position-relative form-group">
-                                                    <label class="">NIK Pegawai</label>
-                                                    <input name="nik_pegawai" value="<?php echo $tampil['nik_pegawai']?>" type="text" class="form-control">
-                                                </div>
-                                            </div>
-
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Telepon Pegawai</label>
@@ -55,15 +55,36 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Alamat Pegawai</label>
-                                                    <input name="rumah_pegawai" value="<?php echo $tampil['rumah_pegawai']?>" type="text" class="form-control">
+                                                    <label class="">Email Pegawai</label>
+                                                    <input name="email_pegawai" value="<?php echo $tampil['email_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Email</label>
-                                                    <input name="email_pegawai" value="<?php echo $tampil['email_pegawai']?>" type="text" class="form-control">
+                                                    <label class="">BANK</label>
+                                                    <input name="bank_pegawai" value="<?php echo $tampil['bank_pegawai']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Nomor Rekening</label>
+                                                    <input name="norek_pegawai" value="<?php echo $tampil['norek_pegawai']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Cabang Bank</label>
+                                                    <input name="cabangbank_pegawai" value="<?php echo $tampil['cabangbank_pegawai']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Foto Tanda Tangan</label>
+                                                    <input name="ttd_pegawai" value="<?php echo $tampil['ttd_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
 

@@ -25,6 +25,13 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
+                                                    <label class="">NIK Pegawai</label>
+                                                    <input name="nik_pegawai"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
                                                     <label class="">Nama Pegawai</label>
                                                     <input name="nama_pegawai"  type="text" class="form-control">
                                                 </div>
@@ -37,12 +44,6 @@
                                                 </div>
                                             </div>
 
-                                             <div class="col-md-12">
-                                                <div class="position-relative form-group">
-                                                    <label class="">NIK Pegawai</label>
-                                                    <input name="nik_pegawai"  type="text" class="form-control">
-                                                </div>
-                                            </div>
 
                                              <div class="col-md-12">
                                                 <div class="position-relative form-group">
@@ -51,17 +52,39 @@
                                                 </div>
                                             </div>
 
-                                             <div class="col-md-12">
+
+                                            <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Rumah Pegawai</label>
-                                                    <input name="rumah_pegawai"  type="text" class="form-control">
+                                                    <label class="">Email Pegawai</label>
+                                                    <input name="email_pegawai"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">BANK</label>
+                                                    <input name="bank_pegawai"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Nomor Rekening</label>
+                                                    <input name="norek_pegawai"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Cabnag Bank</label>
+                                                    <input name="cabangbank_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                              <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Email Pegawai</label>
-                                                    <input name="email_pegawai"  type="text" class="form-control">
+                                                    <label class="">TTD Pegawai</label>
+                                                    <input name="ttd_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>
 

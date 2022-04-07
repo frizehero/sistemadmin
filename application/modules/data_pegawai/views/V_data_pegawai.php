@@ -29,12 +29,15 @@
                                     <tr>
                                         <th>Detail</th>
                                         <th>No</th>
-                                        <th width="20%">NIK Pegawai</th>
-                                        <th width="20%">Nama Pegawai</th>
-                                        <th width="20%">Jabatan Pegawai</th>
-                                        <th width="20%">Telepon Pegawai</th>
-                                        <th width="20%">Email Pegawai</th>
-                                        <th width="20%">Foto TTD</th>
+                                        <th width="20%">NIK</th>
+                                        <th width="20%">Nama</th>
+                                        <th width="20%">Jabatan</th>
+                                        <th width="20%">Telepon</th>
+                                        <th width="20%">Email</th>
+                                        <th width="20%">Bank</th>
+                                        <th width="20%">Nomor Rekening</th>
+                                        <th width="20%">Cabang Bank</th>
+                                        <th width="20%">TTD Pegawai</th>
                                         <th>Opsi</th>
                                         
                                        
@@ -51,14 +54,22 @@
                                             <i class="fa fa-search fa-w-16 fa-spin "></i>
                                             </button></td>
                                         <td><?php echo $no;?></td>
+                                        <td><?php echo $rowP->nik_pegawai;?></td>
                                         <td><?php echo $rowP->nama_pegawai;?></td>
                                         <td><?php echo $rowP->ket_pegawai;?></td>
-                                        <td><?php echo $rowP->nik_pegawai;?></td>
                                         <td><?php echo $rowP->telepon_pegawai;?></td>
-                                        <td><?php echo $rowP->rumah_pegawai;?></td>
                                         <td><?php echo $rowP->email_pegawai;?></td>
+                                        <td><?php echo $rowP->bank_pegawai;?></td>
+                                        <td><?php echo $rowP->norek_pegawai;?></td>
+                                        <td><?php echo $rowP->cabangbank_pegawai;?></td>
+                                        <td><?php echo $rowP->ttd_pegawai;?></td>
+                                        
                                       
                                         <td>
+                                            <a href="<?php echo base_url('data_pegawai/listview/'. encrypt_url($rowP->id_data_pegawai)); ?>" class="btn btn-success">
+                                            <i class="fa fa-user fa-w-16"></i>
+                                            </a>
+
                                             <a href="<?php echo base_url('data_pegawai/editview/'. encrypt_url($rowP->id_data_pegawai)); ?>" class="btn btn-primary">
                                             <i class="fa fa-pen fa-w-16"></i>
                                             </a>

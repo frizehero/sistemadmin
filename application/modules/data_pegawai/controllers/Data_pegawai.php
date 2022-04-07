@@ -45,6 +45,18 @@ class Data_pegawai extends MX_Controller {
 		echo Modules::run('template/tampilCore', $data);
 	}
 
+	// Halaman Listview
+	function listview($id)
+	{
+
+		$data = array(
+			'namamodule' 	=> "data_pegawai",
+			'namafileview' 	=> "V_listview",
+			'tampil'		=> $this->M_data_pegawai->tampiledit($id),
+		);
+		echo Modules::run('template/tampilCore', $data);
+	}
+
 
 	function tambah()
 	{
