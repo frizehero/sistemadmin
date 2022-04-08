@@ -53,6 +53,7 @@ class Data_pegawai extends MX_Controller {
 			'namamodule' 	=> "data_pegawai",
 			'namafileview' 	=> "V_listview",
 			'tampil'		=> $this->M_data_pegawai->tampiledit($id),
+			'tampilist'		=> $this->M_data_pegawai->tampilist($id),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
@@ -63,6 +64,15 @@ class Data_pegawai extends MX_Controller {
 
 		$this->M_data_pegawai->tambah();
 		redirect('data_pegawai');
+		
+		//redirect('data_pegawai');
+	}
+
+	function tambah_subbank()
+	{
+		$id 		= $this->input->post('id');
+		$this->M_data_pegawai->tambah_subbank();
+		redirect('data_pegawai/listview/'.encrypt_url($id));
 		
 		//redirect('data_pegawai');
 	}

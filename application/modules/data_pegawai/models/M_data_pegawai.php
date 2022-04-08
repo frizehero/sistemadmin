@@ -39,6 +39,31 @@ class M_data_pegawai extends CI_Model {
 			
 	}
 
+
+function tambah_subbank()
+	{
+		
+		$nama_list_bank 	= $this->input->post('nama_list_bank');
+		$norek_pegawai 		= $this->input->post('norek_pegawai');
+		$cabangbank_pegawai = $this->input->post('cabangbank_pegawai');
+		$id 				= $this->input->post('id');
+	
+				$data = array(
+
+					'id_list_data_bank'		=> $id,
+					'nama_list_bank'		=> $nama_list_bank,
+					'norek_list_bank'		=> $norek_list_bank,
+					'cabang_list_bank'		=> $cabang_list_bank,	
+
+
+				);
+				$this->db->insert('list_data_bank', $data);
+				$this->session->set_flashdata('msg', 'suksestambah');
+			
+	}
+
+
+
 	function tampiledit($id)
 	{
 		$idnya=decrypt_url($id);
@@ -46,6 +71,12 @@ class M_data_pegawai extends CI_Model {
     	return $this->db->get('data_pegawai')->row_array();
 	}
 
+function tampilist($id)
+	{
+		$idnya=decrypt_url($id);
+		$this->db->where('id_data_pegawai',$idnya);
+    	return $this->db->get('list_data_bank')->result();
+	}
 
 
 	function edit()

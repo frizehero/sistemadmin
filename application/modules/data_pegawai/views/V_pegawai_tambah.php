@@ -25,21 +25,21 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">NIK Pegawai</label>
+                                                    <label class="">NIK</label>
                                                     <input name="nik_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Nama Pegawai</label>
+                                                    <label class="">Nama Lengkap</label>
                                                     <input name="nama_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Jabatan Pegawai</label>
+                                                    <label class="">Jabatan</label>
                                                     <input name="ket_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>
@@ -47,7 +47,7 @@
 
                                              <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Telepon Pegawai</label>
+                                                    <label class="">Telepon</label>
                                                     <input name="telepon_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>
@@ -55,7 +55,7 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Email Pegawai</label>
+                                                    <label class="">Email</label>
                                                     <input name="email_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>
@@ -83,7 +83,7 @@
 
                                              <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">TTD Pegawai</label>
+                                                    <label class="">Tanda Tangan</label>
                                                     <input name="ttd_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>

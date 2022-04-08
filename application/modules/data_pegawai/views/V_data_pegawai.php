@@ -37,7 +37,7 @@
                                         <th width="20%">Bank</th>
                                         <th width="20%">Nomor Rekening</th>
                                         <th width="20%">Cabang Bank</th>
-                                        <th width="20%">TTD Pegawai</th>
+                                        <th width="20%">Tanda Tangan</th>
                                         <th>Opsi</th>
                                         
                                        

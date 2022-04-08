@@ -27,35 +27,35 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">NIK Pegawai</label>
+                                                    <label class="">NIK</label>
                                                     <input name="nik_pegawai" value="<?php echo $tampil['nik_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                              <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Nama Pegawai</label>
+                                                    <label class="">Nama Lengkap</label>
                                                     <input name="nama_pegawai" value="<?php echo $tampil['nama_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Keterangan Pegawai</label>
+                                                    <label class="">Jabatan</label>
                                                     <input name="ket_pegawai" value="<?php echo $tampil['ket_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Telepon Pegawai</label>
+                                                    <label class="">Telepon</label>
                                                     <input name="telepon_pegawai" value="<?php echo $tampil['telepon_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Email Pegawai</label>
+                                                    <label class="">Email</label>
                                                     <input name="email_pegawai" value="<?php echo $tampil['email_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
@@ -65,6 +65,7 @@
                                                     <label class="">BANK</label>
                                                     <input name="bank_pegawai" value="<?php echo $tampil['bank_pegawai']?>" type="text" class="form-control">
                                                 </div>
+
                                             </div>
 
                                             <div class="col-md-12">
@@ -83,7 +84,7 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Foto Tanda Tangan</label>
+                                                    <label class="">Tanda Tangan</label>
                                                     <input name="ttd_pegawai" value="<?php echo $tampil['ttd_pegawai']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
