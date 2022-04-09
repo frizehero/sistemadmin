@@ -43,10 +43,10 @@ class M_data_pegawai extends CI_Model {
 function tambah_subbank()
 	{
 		
-		$nama_list_bank 	= $this->input->post('nama_list_bank');
-		$norek_pegawai 		= $this->input->post('norek_pegawai');
-		$cabangbank_pegawai = $this->input->post('cabangbank_pegawai');
-		$id 				= $this->input->post('id');
+		$nama_list_bank 		= $this->input->post('nama_list_bank');
+		$norek_list_bank 		= $this->input->post('norek_list_bank');
+		$cabang_list_bank 		= $this->input->post('cabang_list_bank');
+		$id 					= $this->input->post('id');
 	
 				$data = array(
 
@@ -113,6 +113,13 @@ function tampilist($id)
 	{
 		$id = $this->input->post('id');
 		$this->db->where('id_data_pegawai', $id)->delete('data_pegawai');
+		$this->session->set_flashdata('msg', 'sukseshapus');
+	}
+
+	function hapus_subbank()
+	{
+		$id = $this->input->post('id');
+		$this->db->where('id_list_data_bank ', $id)->delete('list_data_bank');
 		$this->session->set_flashdata('msg', 'sukseshapus');
 	}
 

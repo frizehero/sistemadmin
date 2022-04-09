@@ -5,8 +5,8 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>Ubah Detail Data Pegawai 
-                                        <div class="page-title-subheading">Ubah Data Pegawai, Silahkan Isi semua form di bawah ini dengan lengkap...</div>
+                                    <div>Sub Bank 
+                                        <div class="page-title-subheading">Tambahkan Sub Bank, Silahkan Isi semua form di bawah ini dengan lengkap...</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
@@ -28,7 +28,7 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Nama Sub Bank</label>
+                                                    <label class="">Sub Bank</label>
                                                     <input name="nama_list_bank" type="text" class="form-control">
                                                 </div>
                                             </div>
@@ -36,14 +36,14 @@
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Nomor Rekening</label>
-                                                    <input name="norek_pegawai"  type="text" class="form-control">
+                                                    <input name="norek_list_bank"  type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Cabang Bank</label>
-                                                    <input name="cabangbank_pegawai"  type="text" class="form-control">
+                                                    <input name="cabang_list_bank"  type="text" class="form-control">
                                                 </div>
                                             </div>
 
@@ -92,6 +92,10 @@
                                         
                                         <td><?php echo $no;?></td>
                                         <td><?php echo $rowP->nama_list_data_pegawai;?></td>
+                                        <td><?php echo $rowP->norek_list_bank;?></td>
+                                        <td><?php echo $rowP->cabang_list_bank;?></td>
+
+
                                         <td>        
 
                                            
@@ -114,7 +118,7 @@
                             </button>
                           </div>
 
-                          <form action="<?php echo base_url('data_pegawai/hapus') ?>" method="POST" enctype="multipart/form-data">
+                          <form action="<?php echo base_url('data_pegawai/hapus_subbank') ?>" method="POST" enctype="multipart/form-data">
                           <div class="modal-body">
                              <!--Modal body-->
                                 <p class="text-semibold text-main"></p>

@@ -30,7 +30,7 @@ class M_data_divisi extends CI_Model {
 		
 
 				$data = array(
-					'id_data_divisi'		=> $id,
+					'id_data_divisi'			=> $id,
 					'nama_list_data_divisi'		=> $list_nama_data_divisi,
 				);
 				$this->db->insert('list_data_divisi', $data);
@@ -77,6 +77,7 @@ class M_data_divisi extends CI_Model {
 		$this->db->where('id_data_divisi', $id)->delete('data_divisi');
 		$this->session->set_flashdata('msg', 'sukseshapus');
 	}
+	
 	function hapus_subdivisi()
 	{
 		$id = $this->input->post('id');

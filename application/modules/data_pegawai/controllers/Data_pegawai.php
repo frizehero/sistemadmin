@@ -88,6 +88,14 @@ class Data_pegawai extends MX_Controller {
 		$this->M_data_pegawai->hapus();
 		redirect('data_pegawai');
 	}
+
+	function hapus_subbank()
+	{
+		$id_data_pegawai 		= $this->input->post('id_data_pegawai');
+		
+		$this->M_data_pegawai->hapus_subbank();
+		redirect('data_pegawai/listview/'.encrypt_url($id_data_pegawai));
+	}
 	
 }
  
