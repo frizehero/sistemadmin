@@ -50,7 +50,7 @@ function tambah_subbank()
 	
 				$data = array(
 
-					'id_list_data_bank'		=> $id,
+					'id_data_pegawai'		=> $id,
 					'nama_list_bank'		=> $nama_list_bank,
 					'norek_list_bank'		=> $norek_list_bank,
 					'cabang_list_bank'		=> $cabang_list_bank,	
