@@ -32,7 +32,7 @@
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">PT. KLIEN</label>
+                                                    <label class="">Klient</label>
                                                     <input name="pt_D02"  type="text" class="form-control">
                                                 </div>
                                             </div>

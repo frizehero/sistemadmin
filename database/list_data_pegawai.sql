@@ -24,45 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `list_data_divisi`
+-- Table structure for table `list_data_pegawai`
 --
 
-CREATE TABLE `list_data_divisi` (
-  `id_list_data_divisi` int(11) NOT NULL,
-  `id_data_divisi` varchar(100) DEFAULT NULL,
-  `nama_list_data_divisi` varchar(100) DEFAULT NULL,
+CREATE TABLE `list_data_pegawai` (
+  `id_list_data_pegawai` int(11) NOT NULL,
+  `id_data_pegawai` varchar(100) DEFAULT NULL,
+  `nama_list_data_pegawai` varchar(100) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `list_data_divisi`
---
-
-INSERT INTO `list_data_divisi` (`id_list_data_divisi`, `id_data_divisi`, `nama_list_data_divisi`, `created_at`) VALUES
-(3, '1', 'Driver', '2022-04-03 07:13:44'),
-(4, '2', 'Surveyor', '2022-04-03 07:17:39'),
-(5, '1', 'Helper Driver', '2022-04-03 07:18:10'),
-(6, '2', 'Sampler', '2022-04-03 07:31:46');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `list_data_divisi`
+-- Indexes for table `list_data_pegawai`
 --
-ALTER TABLE `list_data_divisi`
-  ADD PRIMARY KEY (`id_list_data_divisi`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `list_data_divisi`
---
-ALTER TABLE `list_data_divisi`
-  MODIFY `id_list_data_divisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `list_data_pegawai`
+  ADD PRIMARY KEY (`id_list_data_pegawai`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

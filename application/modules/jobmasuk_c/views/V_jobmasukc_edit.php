@@ -33,7 +33,7 @@
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">PT. Klien</label>
+                                                    <label class="">Klient</label>
                                                     <input name="pt_C02" value="<?php echo $tampil['pt_C02']?>" type="text" class="form-control">
                                                 </div>
                                             </div>

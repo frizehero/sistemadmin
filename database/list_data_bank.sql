@@ -24,45 +24,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `list_data_divisi`
+-- Table structure for table `list_data_bank`
 --
 
-CREATE TABLE `list_data_divisi` (
-  `id_list_data_divisi` int(11) NOT NULL,
-  `id_data_divisi` varchar(100) DEFAULT NULL,
-  `nama_list_data_divisi` varchar(100) DEFAULT NULL,
+CREATE TABLE `list_data_bank` (
+  `id_list_data_bank` int(11) NOT NULL,
+  `id_data_pegawai` varchar(100) DEFAULT NULL,
+  `nama_list_bank` varchar(100) DEFAULT NULL,
+  `norek_list_bank` varchar(100) DEFAULT NULL,
+  `cabang_list_bank` varchar(100) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `list_data_divisi`
+-- Dumping data for table `list_data_bank`
 --
 
-INSERT INTO `list_data_divisi` (`id_list_data_divisi`, `id_data_divisi`, `nama_list_data_divisi`, `created_at`) VALUES
-(3, '1', 'Driver', '2022-04-03 07:13:44'),
-(4, '2', 'Surveyor', '2022-04-03 07:17:39'),
-(5, '1', 'Helper Driver', '2022-04-03 07:18:10'),
-(6, '2', 'Sampler', '2022-04-03 07:31:46');
+INSERT INTO `list_data_bank` (`id_list_data_bank`, `id_data_pegawai`, `nama_list_bank`, `norek_list_bank`, `cabang_list_bank`, `created_at`) VALUES
+(30, '2', 'BCA', '123', 'SURABAYA', '2022-04-12 08:18:07');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `list_data_divisi`
+-- Indexes for table `list_data_bank`
 --
-ALTER TABLE `list_data_divisi`
-  ADD PRIMARY KEY (`id_list_data_divisi`);
+ALTER TABLE `list_data_bank`
+  ADD PRIMARY KEY (`id_list_data_bank`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `list_data_divisi`
+-- AUTO_INCREMENT for table `list_data_bank`
 --
-ALTER TABLE `list_data_divisi`
-  MODIFY `id_list_data_divisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `list_data_bank`
+  MODIFY `id_list_data_bank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

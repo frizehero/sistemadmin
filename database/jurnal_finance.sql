@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2022 at 06:27 AM
+-- Generation Time: Apr 14, 2022 at 06:26 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -24,45 +24,41 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `list_data_divisi`
+-- Table structure for table `jurnal_finance`
 --
 
-CREATE TABLE `list_data_divisi` (
-  `id_list_data_divisi` int(11) NOT NULL,
-  `id_data_divisi` varchar(100) DEFAULT NULL,
-  `nama_list_data_divisi` varchar(100) DEFAULT NULL,
+CREATE TABLE `jurnal_finance` (
+  `id_jurnal_finance` int(11) NOT NULL,
+  `nopc_finance` varchar(100) DEFAULT NULL,
+  `detailtransaksi_finance` varchar(100) DEFAULT NULL,
+  `id_jobmasuk_C02` varchar(100) DEFAULT NULL,
+  `id_jobmasuk_D02` varchar(100) DEFAULT NULL,
+  `nominal_transaksi_finance` varchar(100) DEFAULT NULL,
+  `nominal_bank_charges` varchar(100) DEFAULT NULL,
+  `kode_coa` varchar(100) DEFAULT NULL,
+  `date_` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `list_data_divisi`
---
-
-INSERT INTO `list_data_divisi` (`id_list_data_divisi`, `id_data_divisi`, `nama_list_data_divisi`, `created_at`) VALUES
-(3, '1', 'Driver', '2022-04-03 07:13:44'),
-(4, '2', 'Surveyor', '2022-04-03 07:17:39'),
-(5, '1', 'Helper Driver', '2022-04-03 07:18:10'),
-(6, '2', 'Sampler', '2022-04-03 07:31:46');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `list_data_divisi`
+-- Indexes for table `jurnal_finance`
 --
-ALTER TABLE `list_data_divisi`
-  ADD PRIMARY KEY (`id_list_data_divisi`);
+ALTER TABLE `jurnal_finance`
+  ADD PRIMARY KEY (`id_jurnal_finance`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `list_data_divisi`
+-- AUTO_INCREMENT for table `jurnal_finance`
 --
-ALTER TABLE `list_data_divisi`
-  MODIFY `id_list_data_divisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `jurnal_finance`
+  MODIFY `id_jurnal_finance` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
