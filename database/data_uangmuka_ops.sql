@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2022 at 06:25 AM
+-- Generation Time: Apr 14, 2022 at 07:03 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -32,7 +32,11 @@ CREATE TABLE `data_uangmuka_ops` (
   `id_jobmasuk_C02` int(11) NOT NULL,
   `id_jobmasuk_D02` int(11) NOT NULL,
   `id_data_pegawai` int(11) NOT NULL,
-  `id_list_data_bank` int(11) NOT NULL
+  `id_list_data_bank` int(11) NOT NULL,
+  `nominal_uangmukaops` varchar(100) NOT NULL,
+  `tgl_uangmukaops` date NOT NULL,
+  `id_jurnal_finance` int(100) NOT NULL,
+  `id_laporan_uangmuka_ops` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
