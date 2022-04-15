@@ -39,10 +39,19 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="col-md-12">
+                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Jabatan</label>
-                                                    <input name="ket_pegawai" value="<?php echo $tampil['ket_pegawai']?>" type="text" class="form-control">
+                                                    <select name="ket_pegawai" class="form-control">
+                                                        <?php  
+                                                         foreach ($piljabatan AS $rowP ) { ?>
+                                                            <option <?php if($rowP->id_data_divisi == $tampil['ket_pegawai']){ echo 'selected="selected"'; } ?>
+                                                             value="<?php echo $rowP->id_data_divisi ?>"><?php echo $rowP->nama_data_divisi?> </option>
+                                                        
+                                                        <?php }
+                                                        ?>
+
+                                                    </select>
                                                 </div>
                                             </div>
 

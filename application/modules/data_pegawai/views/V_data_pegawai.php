@@ -48,7 +48,9 @@
                                     <?php  
                                     $no=1;
                                            
-                                    foreach ($tampil AS $rowP ) { ?>
+                                    foreach ($tampil AS $rowP ) { 
+                                        $data_bank= $this->M_data_pegawai->data_bank($rowP->id_data_pegawai);
+                                        ?>
                                     <tr>
                                         <td><button type="button" class="btn btn-warning">
                                             <i class="fa fa-search fa-w-16 fa-spin "></i>
@@ -56,18 +58,31 @@
                                         <td><?php echo $no;?></td>
                                         <td><?php echo $rowP->nik_pegawai;?></td>
                                         <td><?php echo $rowP->nama_pegawai;?></td>
-                                        <td><?php echo $rowP->ket_pegawai;?></td>
+                                        <td><?php echo $rowP->nama_data_divisi;?></td>
                                         <td><?php echo $rowP->telepon_pegawai;?></td>
                                         <td><?php echo $rowP->email_pegawai;?></td>
-                                        <td><?php echo $rowP->bank_pegawai;?></td>
-                                        <td><?php echo $rowP->norek_pegawai;?></td>
-                                        <td><?php echo $rowP->cabangbank_pegawai;?></td>
+
+                                        <td><?php foreach ($data_bank AS $nb ) { 
+                                            echo "<br>".$nb->nama_list_bank;
+                                             }?>
+                                        </td>
+                                        <td><?php foreach ($data_bank AS $nb ) { 
+                                            echo "<br>".$nb->norek_list_bank;
+                                             }?>
+                                        </td>
+                                         <td><?php foreach ($data_bank AS $nb ) { 
+                                            echo "<br>".$nb->cabang_list_bank;
+                                             }?>
+                                        </td>
+
+
+                                        
                                         <td><?php echo $rowP->ttd_pegawai;?></td>
                                         
                                       
                                         <td>
                                             <a href="<?php echo base_url('data_pegawai/listview/'. encrypt_url($rowP->id_data_pegawai)); ?>" class="btn btn-success">
-                                            <i class="fa fa-user fa-w-16"></i>
+                                            <i class="fa fa-university fa-w-16"></i>
                                             </a>
 
                                             <a href="<?php echo base_url('data_pegawai/editview/'. encrypt_url($rowP->id_data_pegawai)); ?>" class="btn btn-primary">

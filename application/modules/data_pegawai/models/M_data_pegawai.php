@@ -5,8 +5,18 @@ class M_data_pegawai extends CI_Model {
 
 	function tampil()
 	{
-		return $this->db->get('data_pegawai')->result();
+		$this->db->select('*');
+		$this->db->from('data_pegawai');
+		$this->db->join('data_divisi','data_pegawai.ket_pegawai = data_divisi.id_data_divisi');
+		$query = $this->db->get();
+		return $query->result();
 	}
+
+	function piljabatan()
+	{
+		return $this->db->get('data_divisi')->result();
+	}
+
 
 	function tambah()
 	{
@@ -75,6 +85,12 @@ function tampilist($id)
 	{
 		$idnya=decrypt_url($id);
 		$this->db->where('id_data_pegawai',$idnya);
+    	return $this->db->get('list_data_bank')->result();
+	}
+
+	function data_bank($id)
+	{
+		$this->db->where('id_data_pegawai',$id);
     	return $this->db->get('list_data_bank')->result();
 	}
 

@@ -29,6 +29,7 @@ class Data_pegawai extends MX_Controller {
 		$data = array(
 			'namamodule' 	=> "data_pegawai",
 			'namafileview' 	=> "V_pegawai_tambah",
+			'piljabatan'		=> $this->M_data_pegawai->piljabatan(),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
@@ -41,6 +42,7 @@ class Data_pegawai extends MX_Controller {
 			'namamodule' 	=> "data_pegawai",
 			'namafileview' 	=> "V_pegawai_edit",
 			'tampil'		=> $this->M_data_pegawai->tampiledit($id),
+			'piljabatan'		=> $this->M_data_pegawai->piljabatan(),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
