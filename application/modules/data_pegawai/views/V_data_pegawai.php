@@ -11,7 +11,7 @@
                                 </div>
                                 <div class="page-title-actions">
 
-                                <a href="<?php echo base_url('data_pegawai/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-warning">Halaman Input</a>
+                                <a href="<?php echo base_url('data_pegawai/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-primary">Halaman Input</a>
                                   
                                   <a href="<?php echo base_url('data_pegawai/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
 
@@ -82,14 +82,14 @@
                                       
                                         <td>
                                             <a href="<?php echo base_url('data_pegawai/listview/'. encrypt_url($rowP->id_data_pegawai)); ?>" class="btn btn-success">
-                                            <i class="fa fa-university fa-w-16"></i>
+                                            <i class="fa fa-plus fa-w-16"></i>
                                             </a>
 
                                             <a href="<?php echo base_url('data_pegawai/editview/'. encrypt_url($rowP->id_data_pegawai)); ?>" class="btn btn-primary">
                                             <i class="fa fa-pen fa-w-16"></i>
                                             </a>
 
-                                        <button class="btn btn-warning" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
+                                        <button class="btn btn-danger" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
                                         <i class="fa fa-trash fa-w-16"></i>
                                         </button>
                                     </td>

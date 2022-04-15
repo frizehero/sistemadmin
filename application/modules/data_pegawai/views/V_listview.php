@@ -122,7 +122,7 @@
                           <div class="modal-body">
                              <!--Modal body-->
                                 <p class="text-semibold text-main"></p>
-                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->nama_list_bank ?></b> ? </p>
+                                <p>Anda Yakin Ingin Menghapus Rekening <b> <?php echo $rowP->nama_list_bank ?> <?php echo $rowP->norek_list_bank ?></b> ? </p>
 
                                 <input name="id_data_pegawai"  type="hidden" value="<?php echo $rowP->id_data_pegawai ?>" class="form-control">
                                 <input name="id"  type="hidden" value="<?php echo $rowP->id_list_data_bank ?>" class="form-control">
