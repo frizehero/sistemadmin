@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_jobmasuk_c extends CI_Model {
+class M_uangmuka_ops extends CI_Model {
 
 	function tampil()
 	{
-		return $this->db->get('jobmasuk_c')->result();
+		return $this->db->get('uangmuka_ops')->result();
 	}
 
 	function tambah()

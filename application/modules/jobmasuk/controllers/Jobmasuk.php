@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Jobmasuk_c extends MX_Controller {
+class Jobmasuk extends MX_Controller {
 
 	function __construct()
 	{
 		parent::__construct();
 		// model
-		 $this->load->model('M_jobmasuk_c');
+		 $this->load->model('M_jobmasuk');
 		 $this->load->model('login/m_session');
 	}
 
@@ -16,9 +16,9 @@ class Jobmasuk_c extends MX_Controller {
 	function index()
 	{
 		$data = array(
-			'namamodule' 	=> "jobmasuk_c",
-			'namafileview' 	=> "V_jobmasuk_c",
-			'tampil'		=> $this->M_jobmasuk_c->tampil(),
+			'namamodule' 	=> "jobmasuk",
+			'namafileview' 	=> "V_jobmasuk",
+			'tampil'		=> $this->M_jobmasuk->tampil(),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
@@ -27,8 +27,8 @@ class Jobmasuk_c extends MX_Controller {
 	function tambahview()
 	{
 		$data = array(
-			'namamodule' 	=> "jobmasuk_c",
-			'namafileview' 	=> "V_jobmasukc_tambah",
+			'namamodule' 	=> "jobmasuk",
+			'namafileview' 	=> "V_jobmasuk_tambah",
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
@@ -38,9 +38,9 @@ class Jobmasuk_c extends MX_Controller {
 	{
 
 		$data = array(
-			'namamodule' 	=> "jobmasuk_c",
-			'namafileview' 	=> "V_jobmasukc_edit",
-			'tampil'		=> $this->M_jobmasuk_c->tampiledit($id),
+			'namamodule' 	=> "jobmasuk",
+			'namafileview' 	=> "V_jobmasuk_edit",
+			'tampil'		=> $this->M_jobmasuk->tampiledit($id),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
@@ -49,22 +49,22 @@ class Jobmasuk_c extends MX_Controller {
 	function tambah()
 	{
 
-		$this->M_jobmasuk_c->tambah();
-		redirect('jobmasuk_c');
+		$this->M_jobmasuk->tambah();
+		redirect('jobmasuk');
 		
-		//redirect('jobmasuk_c');
+		//redirect('jobmasuk');
 	}
 
 	function edit()
 	{
-		$this->M_jobmasuk_c->edit();
-		redirect('jobmasuk_c');
+		$this->M_jobmasuk->edit();
+		redirect('jobmasuk');
 	}
 
 	function hapus()
 	{
-		$this->M_jobmasuk_c->hapus();
-		redirect('jobmasuk_c');
+		$this->M_jobmasuk->hapus();
+		redirect('jobmasuk');
 	}
 	
 }
