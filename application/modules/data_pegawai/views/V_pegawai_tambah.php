@@ -40,7 +40,7 @@
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Jabatan</label>
-                                                    <select name="ket_pegawai" class="form-control">
+                                                    <select name="ket_pegawai" class="multiselect-dropdown form-control">
                                                         <?php  
                                                          foreach ($piljabatan AS $rowP ) { ?>
                                                         <option value="<?php echo $rowP->id_data_divisi;?>"><?php echo $rowP->nama_data_divisi;?></option>

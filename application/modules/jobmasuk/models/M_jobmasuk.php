@@ -11,6 +11,7 @@ class M_jobmasuk extends CI_Model {
 	function tambah()
 	{
 		$jobno			= $this->input->post('jobno');
+		$jobkode		= $this->input->post('jobkode');
 		$pt   			= $this->input->post('pt');
 		$vessel_bg		= $this->input->post('vessel_bg');
 		$eta			= $this->input->post('eta');
@@ -21,6 +22,7 @@ class M_jobmasuk extends CI_Model {
 
 				$data = array(
 					'jobno'			=> $jobno,
+					'jobkode'		=> $jobkode,
 					'pt'			=> $pt,
 					'vessel_bg'		=> $vessel_bg,
 					'eta'			=> $eta,
@@ -47,6 +49,7 @@ class M_jobmasuk extends CI_Model {
 	{
 		$id 					= $this->input->post('id');
 		$jobno					= $this->input->post('jobno');
+		$jobkode					= $this->input->post('jobkode');
 		$pt						= $this->input->post('pt');
 		$vessel_bg				= $this->input->post('vessel_bg');
 		$eta					= $this->input->post('eta');
@@ -58,6 +61,7 @@ class M_jobmasuk extends CI_Model {
 
 				$data = array(
 					'jobno'				=> $jobno,
+					'jobkode'			=> $jobkode,
 					'pt'				=> $pt,
 					'vessel_bg'			=> $vessel_bg,
 					'eta'				=> $eta,

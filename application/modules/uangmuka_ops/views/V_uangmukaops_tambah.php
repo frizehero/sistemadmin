@@ -5,19 +5,19 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>Tambah Data Ruangan
-                                        <div class="page-title-subheading">Tambah Data Ruangan, Silahkan Isi semua form di bawah ini dengan lengkap...</div>
+                                    <div>Permintaan Uang Muka Operasional
+                                        <div class="page-title-subheading">Silahkan Isi semua form uang muka operasional dengan lengkap</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
                                   
-                                 <a href="<?php echo base_url('jobmasuk_c'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Kembali</a>
+                                 <a href="<?php echo base_url('uangmuka_ops'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Kembali</a>
                                 </div>    </div>
                         </div>   
                         <div class="col-md-6">
                         <div class="main-card mb-3 card">
 
-                            <form action="<?php echo base_url('jobmasuk_c/tambah') ?>" method="POST" enctype="multipart/form-data">
+                            <form action="<?php echo base_url('uangmuka_ops/tambah') ?>" method="POST" enctype="multipart/form-data">
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
                                     <form class="">
@@ -25,53 +25,113 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Job Number</label>
-                                                    <input name="jobno_C02"  type="text" class="form-control">
+                                                    <label class="">Tanggal</label>
+                                                    <input name="tanggal_uangmukaops"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">NIK</label>
+                                                    <input name="nik_pegawai" value="c02" type="text" class="form-control">
                                                 </div>
                                             </div>
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Klient</label>
-                                                    <input name="pt_C02"  type="text" class="form-control">
+                                                    <label class="">Nama</label>
+                                                    <input name="nama_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Vessel/Barge</label>
-                                                    <input name="vessel_bg_C02"  type="text" class="form-control">
+                                                    <label class="">Job Number</label>
+                                                    <select name ="jobno" class="multiselect-dropdown form-control">
+                                                        <?php
+                                                        foreach($piljobno AS $rowP) { ?>
+                                                        <option value="jobno_PUNYAC"><?php echo $rowP->jobno;?></option>
+
+                                                        <?php }?>
+
+                                                    </select>
                                                 </div>
                                             </div>
+
+                                           
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Klient</label>
+                                                    <input name="pt"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">ETA</label>
-                                                     <textarea name="eta_C02" class="form-control"></textarea>
+                                                    <label class="">Vessel/Barge</label>
+                                                     <textarea name="vessel_bg" class="form-control"></textarea>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Lokasi</label>
-                                                    <input name="lokasi_C02"  type="text" class="form-control">
+                                                    <label class="">Detail Job</label>
+                                                    <input name="job_pekerjaannya"  type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Tujuan</label>
-                                                    <input name="tujuan_C02"  type="text" class="form-control">
+                                                    <label class="">Deskripsi</label>
+                                                    <input name="deskripsi_uangmukaops"  type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Status Job</label>
-                                                    <input name="statusjob_C02"  type="text" class="form-control">
+                                                    <label class="">Nominal</label>
+                                                    <input name="nominal_uangmukaops"  type="text" class="form-control">
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Nama Pemilik Rekening</label>
+                                                    <input name="nama_pegawai"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Bank</label>
+                                                    <input name="nama_list_bank"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Nomor Rekening</label>
+                                                    <input name="norek_bank"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Cabang</label>
+                                                    <input name="cabang_bank"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Keterangan</label>
+                                                    <input name="ket_uangmukaops"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
                                         </div>
 
                                         <button class="mt-2 btn btn-primary"  type="submit" >Simpan Data</button>

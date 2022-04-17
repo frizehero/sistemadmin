@@ -847,14 +847,14 @@ $menu = $uri_segments[2];
                                 </a>
                                 <ul class="mm-collapse mm-show">
 
-                                     <?php if ($menu=="inventory_peralatan"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('inventory_peralatan'); ?>">
+                                     <?php if ($menu=="jobmasuk"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('jobmasuk'); ?>">
                                            <i class="metismenu-icon"></i>KODE C02
                                         </a>
                                     </li>
 
-                                     <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                                     <?php if ($menu=="jobmasuk_d"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('jobmasuk_d'); ?>">
                                            <i class="metismenu-icon"></i>KODE D02
                                         </a>
                                     </li>
@@ -875,8 +875,8 @@ $menu = $uri_segments[2];
                                 </a>
                                 <ul class="mm-collapse mm-show">
 
-                                     <?php if ($menu=="inventory_peralatan"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('inventory_peralatan'); ?>">
+                                     <?php if ($menu=="uangmuka_ops"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('uangmuka_ops'); ?>">
                                            <i class="metismenu-icon"></i>UANG MUKA OPERASIONAL
                                         </a>
                                     </li>
@@ -960,8 +960,8 @@ $menu = $uri_segments[2];
 </li>
                            
 
-                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('beranda'); ?>">
+                             <?php if ($menu=="data_pegawai"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('data_pegawai'); ?>">
                                            <i class="metismenu-icon pe-7s-rocket"></i>DATA KARYAWAN
                                         </a>
                                     </li>                                    

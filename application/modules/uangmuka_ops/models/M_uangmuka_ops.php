@@ -8,28 +8,54 @@ class M_uangmuka_ops extends CI_Model {
 		return $this->db->get('uangmuka_ops')->result();
 	}
 
+	function piljobno()
+	{
+		return $this->db->get('jobmasuk')->result();
+	}
+
 	function tambah()
 	{
-		$jobno_C02		= $this->input->post('jobno_C02');
-		$pt_C02			= $this->input->post('pt_C02');
-		$vessel_bg_C02	= $this->input->post('vessel_bg_C02');
-		$eta_C02		= $this->input->post('eta_C02');
-		$lokasi_C02		= $this->input->post('lokasi_C02');
-		$tujuan_C02		= $this->input->post('tujuan_C02');
-		$statusjob_C02	= $this->input->post('statusjob_C02');
+		$tanggal_uangmukaops	= $this->input->post('tanggal_uangmukaops');
+		$nik_pegawai			= $this->input->post('nik_pegawai');
+		$nama_pegawai			= $this->input->post('nama_pegawai');
+		$jobno					= $this->input->post('jobno');
+		$pt   					= $this->input->post('pt');
+		$vessel_bg				= $this->input->post('vessel_bg');
+		$job_pekerjaannya		= $this->input->post('job_pekerjaannya');
+		$deskripsi_uangmukaops	= $this->input->post('deskripsi_uangmukaops');
+		$nominal_uangmukaops	= $this->input->post('nominal_uangmukaops');
+		$nama_pegawai			= $this->input->post('nama_pegawai');
+		$nama_list_bank			= $this->input->post('nama_list_bank');
+		$norek_bank				= $this->input->post('norek_bank');
+		$cabang_bank			= $this->input->post('cabang_bank');
+		$ket_uangmukaops		= $this->input->post('ket_uangmukaops');
+		
+
 		
 
 				$data = array(
-					'jobno_C02'			=> $jobno_C02,
-					'pt_C02'			=> $pt_C02,
-					'vessel_bg_C02'		=> $vessel_bg_C02,
-					'eta_C02'			=> $eta_C02,
-					'lokasi_C02'		=> $lokasi_C02,
-					'tujuan_C02'		=> $tujuan_C02,
-					'statusjob_C02'		=> $statusjob_C02,
+					'tanggal_uangmukaops'			=> $tanggal_uangmukaops,
+					'nik_pegawai'					=> $nik_pegawai,
+					'nama_pegawai'					=> $nama_pegawai,
+					'jobno'							=> $jobno,
+					'pt'							=> $pt,
+					'vessel_bg'						=> $vessel_bg,
+					'job_pekerjaannya'				=> $job_pekerjaannya,
+					'deskripsi_uangmukaops'			=> $deskripsi_uangmukaops,
+					'nominal_uangmukaops'			=> $nominal_uangmukaops,
+					'nama_pegawai'					=> $nama_pegawai,
+					'nama_list_bank'				=> $nama_list_bank,
+					'norek_bank'					=> $norek_bank,
+					'cabang_bank'					=> $cabang_bank,
+					'ket_uangmukaops'				=> $ket_uangmukaops,
+					
+
+
+
+					
 					
 				);
-				$this->db->insert('jobmasuk_c', $data);
+				$this->db->insert('uangmuka_ops', $data);
 				$this->session->set_flashdata('msg', 'suksestambah');
 			
 	}
@@ -37,35 +63,49 @@ class M_uangmuka_ops extends CI_Model {
 	function tampiledit($id)
 	{
 		$idnya=decrypt_url($id);
-		$this->db->where('id_jobmasuk_C02',$idnya);
-    	return $this->db->get('jobmasuk_c')->row_array();
+		$this->db->where('id_uangmukaops',$idnya);
+    	return $this->db->get('uangmuka_ops')->row_array();
 	}
 
 
 
 	function edit()
 	{
-		$id 		= $this->input->post('id');
-		$jobno_C02				= $this->input->post('jobno_C02');
-		$pt_C02					= $this->input->post('pt_C02');
-		$vessel_bg_C02			= $this->input->post('vessel_bg_C02');
-		$eta_C02				= $this->input->post('eta_C02');
-		$lokasi_C02				= $this->input->post('lokasi_C02');
-		$tujuan_C02				= $this->input->post('tujuan_C02');
-		$statusjob_C02			= $this->input->post('statusjob_C02');
+		$id 					= $this->input->post('id');
+		$tanggal_uangmukaops	= $this->input->post('tanggal_uangmukaops');
+		$nik_pegawai			= $this->input->post('nik_pegawai');
+		$nama_pegawai			= $this->input->post('nama_pegawai');
+		$jobno					= $this->input->post('jobno');
+		$pt   					= $this->input->post('pt');
+		$vessel_bg				= $this->input->post('vessel_bg');
+		$job_pekerjaannya		= $this->input->post('job_pekerjaannya');
+		$deskripsi_uangmukaops	= $this->input->post('deskripsi_uangmukaops');
+		$nominal_uangmukaops	= $this->input->post('nominal_uangmukaops');
+		$nama_pegawai			= $this->input->post('nama_pegawai');
+		$nama_list_bank			= $this->input->post('nama_list_bank');
+		$norek_bank				= $this->input->post('norek_bank');
+		$cabang_bank			= $this->input->post('cabang_bank');
+		$ket_uangmukaops		= $this->input->post('ket_uangmukaops');
 
 
 
 				$data = array(
-					'jobno_C02'			=> $jobno_C02,
-					'pt_C02'			=> $pt_C02,
-					'vessel_bg_C02'		=> $vessel_bg_C02,
-					'eta_C02'			=> $eta_C02,
-					'lokasi_C02'		=> $lokasi_C02,
-					'tujuan_C02'		=> $tujuan_C02,
-					'statusjob_C02'		=> $statusjob_C02,
+					'tanggal_uangmukaops'			=> $tanggal_uangmukaops,
+					'nik_pegawai'					=> $nik_pegawai,
+					'nama_pegawai'					=> $nama_pegawai,
+					'jobno'							=> $jobno,
+					'pt'							=> $pt,
+					'vessel_bg'						=> $vessel_bg,
+					'job_pekerjaannya'				=> $job_pekerjaannya,
+					'deskripsi_uangmukaops'			=> $deskripsi_uangmukaops,
+					'nominal_uangmukaops'			=> $nominal_uangmukaops,
+					'nama_pegawai'					=> $nama_pegawai,
+					'nama_list_bank'				=> $nama_list_bank,
+					'norek_bank'					=> $norek_bank,
+					'cabang_bank'					=> $cabang_bank,
+					'ket_uangmukaops'				=> $ket_uangmukaops,
 				);
-				$this->db->where('id_jobmasuk_C02',$id)->update('jobmasuk_c', $data);
+				$this->db->where('id_uangmukaops',$id)->update('uangmuka_ops', $data);
 				$this->session->set_flashdata('msg', 'suksesedit');
 
 	}
@@ -74,7 +114,7 @@ class M_uangmuka_ops extends CI_Model {
 	function hapus()
 	{
 		$id = $this->input->post('id');
-		$this->db->where('id_jobmasuk_C02', $id)->delete('jobmasuk_c');
+		$this->db->where('id_uangmukaops', $id)->delete('uangmuka_ops');
 		$this->session->set_flashdata('msg', 'sukseshapus');
 	}
 

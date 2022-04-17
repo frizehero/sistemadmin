@@ -32,6 +32,7 @@
                                         <th width="2%">Detail</th>
                                         <th width="2%">No</th>
                                         <th width="15%">Job Number</th>
+                                        <th width="15%">Kategori Job</th>
                                         <th width="15%">Klient</th>
                                         <th width="15%">Vessel/Barge </th>
                                         <th width="7%">ETA</th>
@@ -54,6 +55,7 @@
                                             </button></td>
                                         <td><?php echo $no;?></td>
                                         <td><?php echo $rowP->jobno_D02;?></td>
+                                        <td><?php echo $rowP->jobkode;?></td>
                                         <td><?php echo $rowP->pt_D02;?></td>
                                         <td><?php echo $rowP->vessel_bg_D02;?></td>
                                         <td><?php echo $rowP->eta_D02;?></td>
@@ -70,7 +72,7 @@
                                         </button>
 
                                         <button class="btn btn-danger" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
-                                        <i class="fa fa-w-16"></i> CANCEL
+                                            <i class="fa fa-times fa fa-w-16"></i>
                                         </button>
 
                                     </td>

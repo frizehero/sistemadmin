@@ -11,6 +11,7 @@ class M_jobmasuk_d extends CI_Model {
 	function tambah()
 	{
 		$jobno_D02		= $this->input->post('jobno_D02');
+		$jobkode		= $this->input->post('jobkode');
 		$pt_D02			= $this->input->post('pt_D02');
 		$vessel_bg_D02	= $this->input->post('vessel_bg_D02');
 		$eta_D02		= $this->input->post('eta_D02');
@@ -21,6 +22,7 @@ class M_jobmasuk_d extends CI_Model {
 
 				$data = array(
 					'jobno_D02'			=> $jobno_D02,
+					'jobkode'			=> $jobkode,
 					'pt_D02'			=> $pt_D02,
 					'vessel_bg_D02'		=> $vessel_bg_D02,
 					'eta_D02'			=> $eta_D02,
@@ -47,6 +49,7 @@ class M_jobmasuk_d extends CI_Model {
 	{
 		$id 					= $this->input->post('id');
 		$jobno_D02				= $this->input->post('jobno_D02');
+		$jobkode				= $this->input->post('jobkode');
 		$pt_D02					= $this->input->post('pt_D02');
 		$vessel_bg_D02			= $this->input->post('vessel_bg_D02');
 		$eta_D02				= $this->input->post('eta_D02');
@@ -58,6 +61,7 @@ class M_jobmasuk_d extends CI_Model {
 
 				$data = array(
 					'jobno_D02'			=> $jobno_D02,
+					'jobkode'			=> $jobkode,
 					'pt_D02'			=> $pt_D02,
 					'vessel_bg_D02'		=> $vessel_bg_D02,
 					'eta_D02'			=> $eta_D02,

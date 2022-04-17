@@ -30,6 +30,14 @@
                                                     <input name="jobno" value="<?php echo $tampil['jobno']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Kategori Job</label>
+                                                    <input name="jobkode" value="<?php echo $tampil['jobkode']?>" type="text" class="form-control" readonly>
+                                                </div>
+                                            </div>
+
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">

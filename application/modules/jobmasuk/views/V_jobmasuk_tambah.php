@@ -29,6 +29,13 @@
                                                     <input name="jobno"  type="text" class="form-control">
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Kategori Job</label>
+                                                    <input name="jobkode" value="C02" type="text" class="form-control" readonly>
+                                                </div>
+                                            </div>
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
