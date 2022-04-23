@@ -6,7 +6,7 @@
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
                                     <div>Ubah Data Pegawai
-                                        <div class="page-title-subheading">Ubah Data Ruangan, Silahkan Isi semua form di bawah ini dengan lengkap...</div>
+                                        <div class="page-title-subheading">Silahkan Isi semua form di bawah ini dengan lengkap...</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
@@ -71,7 +71,7 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">BANK</label>
+                                                    <label class="">Bank</label>
                                                     <input name="bank_pegawai" value="<?php echo $tampil['bank_pegawai']?>" type="text" class="form-control">
                                                 </div>
 

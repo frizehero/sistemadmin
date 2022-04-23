@@ -93,6 +93,13 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
+                                                    <label class="">NIK Pemilik Rekening</label>
+                                                    <input name="nik_pegawai" value="<?php echo $tampil['nik_pegawai']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
                                                     <label class="">Nama Pemilik Rekening</label>
                                                     <input name="nama_pegawai" value="<?php echo $tampil['nama_pegawai']?>" type="text" class="form-control">
                                                 </div>

@@ -30,6 +30,7 @@ class Uangmuka_ops extends MX_Controller {
 			'namamodule' 	=> "uangmuka_ops",
 			'namafileview' 	=> "V_uangmukaops_tambah",
 			'piljobno'		=> $this->M_uangmuka_ops->piljobno(),
+			'piljobnod'		=> $this->M_uangmuka_ops->piljobnod(),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}

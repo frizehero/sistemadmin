@@ -859,8 +859,8 @@ $menu = $uri_segments[2];
                                         </a>
                                     </li>
 
-                                    <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                                    <?php if ($menu=="xx"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('xx'); ?>">
                                            <i class="metismenu-icon"></i>LAPORAN PENGELUARAN
                                         </a>
                                     </li>
@@ -881,8 +881,8 @@ $menu = $uri_segments[2];
                                         </a>
                                     </li>
 
-                                     <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                                     <?php if ($menu=="xx"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('xx'); ?>">
                                            <i class="metismenu-icon"></i>UANG MUKA DRIVER
                                         </a>
                                     </li>
@@ -921,8 +921,8 @@ $menu = $uri_segments[2];
                                         </a>
                                     </li>
 
-                                     <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                                     <?php if ($menu=="xx"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('xx'); ?>">
                                            <i class="metismenu-icon"></i>SPEEDBOAT
                                         </a>
                                     </li>
@@ -964,7 +964,16 @@ $menu = $uri_segments[2];
                                        <a href="<?php echo base_url('data_pegawai'); ?>">
                                            <i class="metismenu-icon pe-7s-rocket"></i>DATA KARYAWAN
                                         </a>
-                                    </li>                                    
+                                    </li>   
+
+
+                             <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                                           <i class="metismenu-icon"></i>DATA DIVISI
+                                        </a>
+                                    </li>  
+
+
 
 
 </li>
@@ -982,8 +991,8 @@ $menu = $uri_segments[2];
 							
                              <li class="app-sidebar__heading">DATA</li>
 
-                             <?php if ($menu=="data_divisi"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('data_divisi'); ?>">
+                             <?php if ($menu=="xx"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('xx'); ?>">
                                            <i class="metismenu-icon pe-7s-airplay"></i>Data Divisi
                                         </a>
 

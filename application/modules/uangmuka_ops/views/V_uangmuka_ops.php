@@ -6,7 +6,7 @@
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
                                     <div>PERMINTAAN UANG MUKA OPERASIONAL
-                                        <div class="page-title-subheading">LIST PINJAMAN UANG</div>
+                                        <div class="page-title-subheading">Uang Muka Operasional</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
@@ -25,7 +25,6 @@
                         <div class="main-card mb-3 card">
                             <div class="card-body">
                                 
-
                                 <table style="width: 100%;" id="example"  class="table table-hover table-striped table-bordered">
                                     <thead>
                                     <tr>
@@ -40,6 +39,7 @@
                                         <th>Detail Job</th>
                                         <th>Deskripsi</th>
                                         <th>Nominal</th>
+                                        <th>NIK Pemilik Rekening</th>
                                         <th>Nama Pemilik Rekening</th>
                                         <th>Bank</th>
                                         <th>No Rekening</th>
@@ -70,6 +70,7 @@
                                         <td><?php echo $rowP->job_pekerjaannya;?></td>
                                         <td><?php echo $rowP->deskripsi_uangmukaops;?></td>
                                         <td><?php echo $rowP->nominal_uangmukaops;?></td>
+                                        <td><?php echo $rowP->nik_pegawai;?></td>
                                         <td><?php echo $rowP->nama_pegawai;?></td>
                                         <td><?php echo $rowP->nama_list_bank;?></td>
                                         <td><?php echo $rowP->norek_bank;?></td>

@@ -13,6 +13,12 @@ class M_uangmuka_ops extends CI_Model {
 		return $this->db->get('jobmasuk')->result();
 	}
 
+
+	function piljobnod()
+	{
+		return $this->db->get('jobmasuk_d')->result();
+	}
+
 	function tambah()
 	{
 		$tanggal_uangmukaops	= $this->input->post('tanggal_uangmukaops');
@@ -24,6 +30,7 @@ class M_uangmuka_ops extends CI_Model {
 		$job_pekerjaannya		= $this->input->post('job_pekerjaannya');
 		$deskripsi_uangmukaops	= $this->input->post('deskripsi_uangmukaops');
 		$nominal_uangmukaops	= $this->input->post('nominal_uangmukaops');
+		$nik_pegawai			= $this->input->post('nik_pegawai');
 		$nama_pegawai			= $this->input->post('nama_pegawai');
 		$nama_list_bank			= $this->input->post('nama_list_bank');
 		$norek_bank				= $this->input->post('norek_bank');

@@ -6,7 +6,7 @@
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
                                     <div>Data Pegawai
-                                        <div class="page-title-subheading">Data Pegawai PT. XXX </div>
+                                        <div class="page-title-subheading">PT. Anindya Wiraputra Konsult </div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">

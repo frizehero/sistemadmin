@@ -68,7 +68,7 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">BANK</label>
+                                                    <label class="">Bank</label>
                                                     <input name="bank_pegawai"  type="text" class="form-control">
                                                 </div>
                                             </div>

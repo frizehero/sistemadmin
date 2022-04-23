@@ -58,7 +58,9 @@
                                         <td><?php echo $rowP->jobkode;?></td>
                                         <td><?php echo $rowP->pt_D02;?></td>
                                         <td><?php echo $rowP->vessel_bg_D02;?></td>
-                                        <td><?php echo $rowP->eta_D02;?></td>
+                                        <td>
+                                            <?php echo date("d-m-Y",strtotime($rowP->eta_D02))?>
+                                        </td>
                                         <td><?php echo $rowP->lokasi_D02;?></td>
                                         <td><?php echo $rowP->tujuan_D02;?></td>
                                         <td><?php echo $rowP->statusjob_D02;?></td>
