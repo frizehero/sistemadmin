@@ -5,8 +5,8 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>JOB NUMBER BANJARBARU
-                                        <div class="page-title-subheading">List Job C02 & D02</div>
+                                    <div>JOB NUMBER C02
+                                        <div class="page-title-subheading">List Pekerjaan C02</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
@@ -58,7 +58,7 @@
                                         <td><?php echo $rowP->jobkode;?></td>
                                         <td><?php echo $rowP->pt;?></td>
                                         <td><?php echo $rowP->vessel_bg;?></td>
-                                        <td><?php echo $rowP->eta;?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($rowP->eta))?></td>
                                         <td><?php echo $rowP->lokasi;?></td>
                                         <td><?php echo $rowP->tujuan;?></td>
                                         <td><?php echo $rowP->statusjob;?></td>

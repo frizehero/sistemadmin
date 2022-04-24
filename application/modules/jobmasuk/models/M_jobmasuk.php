@@ -49,7 +49,7 @@ class M_jobmasuk extends CI_Model {
 	{
 		$id 					= $this->input->post('id');
 		$jobno					= $this->input->post('jobno');
-		$jobkode					= $this->input->post('jobkode');
+		$jobkode				= $this->input->post('jobkode');
 		$pt						= $this->input->post('pt');
 		$vessel_bg				= $this->input->post('vessel_bg');
 		$eta					= $this->input->post('eta');

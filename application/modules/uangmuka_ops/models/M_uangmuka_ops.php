@@ -19,6 +19,12 @@ class M_uangmuka_ops extends CI_Model {
 		return $this->db->get('jobmasuk_d')->result();
 	}
 
+	function pilnik()
+	{
+		return $this->db->get('data_pegawai')->result();
+	}
+
+
 	function tambah()
 	{
 		$tanggal_uangmukaops	= $this->input->post('tanggal_uangmukaops');
@@ -55,11 +61,7 @@ class M_uangmuka_ops extends CI_Model {
 					'norek_bank'					=> $norek_bank,
 					'cabang_bank'					=> $cabang_bank,
 					'ket_uangmukaops'				=> $ket_uangmukaops,
-					
-
-
-
-					
+							
 					
 				);
 				$this->db->insert('uangmuka_ops', $data);

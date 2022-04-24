@@ -877,15 +877,30 @@ $menu = $uri_segments[2];
 
                                      <?php if ($menu=="uangmuka_ops"){?><li class="mm-active"><?php }else{?><li><?php }?>
                                        <a href="<?php echo base_url('uangmuka_ops'); ?>">
-                                           <i class="metismenu-icon"></i>UANG MUKA OPERASIONAL
+                                           <i class="metismenu-icon"></i>PERMINTAAN UMK OPS
                                         </a>
                                     </li>
 
                                      <?php if ($menu=="xx"){?><li class="mm-active"><?php }else{?><li><?php }?>
                                        <a href="<?php echo base_url('xx'); ?>">
-                                           <i class="metismenu-icon"></i>UANG MUKA DRIVER
+                                           <i class="metismenu-icon"></i>PERMINTAAN UMK DRIVER
                                         </a>
                                     </li>
+
+
+                                     <?php if ($menu=="laporan_umkops"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('laporan_umkops'); ?>">
+                                           <i class="metismenu-icon"></i>LAPORAN UMK OPS
+                                        </a>
+                                    </li>
+
+                                    <?php if ($menu=="uangmuka_ops"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('uangmuka_ops'); ?>">
+                                           <i class="metismenu-icon"></i>LAPORAN UMK DRIVER
+                                        </a>
+                                    </li>
+
+
                                 </ul>
                             </li>
 
@@ -962,7 +977,7 @@ $menu = $uri_segments[2];
 
                              <?php if ($menu=="data_pegawai"){?><li class="mm-active"><?php }else{?><li><?php }?>
                                        <a href="<?php echo base_url('data_pegawai'); ?>">
-                                           <i class="metismenu-icon pe-7s-rocket"></i>DATA KARYAWAN
+                                           <i class="metismenu-icon pe-7s-rocket"></i>DATA PEGAWAI
                                         </a>
                                     </li>   
 

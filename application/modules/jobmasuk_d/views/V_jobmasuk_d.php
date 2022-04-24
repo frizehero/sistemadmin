@@ -5,8 +5,8 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>JOB D02
-                                        <div class="page-title-subheading">List Job D02</div>
+                                    <div>JOB NUMBER D02
+                                        <div class="page-title-subheading">List Pekerjaan D02</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">

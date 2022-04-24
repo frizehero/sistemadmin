@@ -5,15 +5,15 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>PERMINTAAN UANG MUKA OPERASIONAL
-                                        <div class="page-title-subheading">Uang Muka Operasional</div>
+                                    <div>LAPORAN KEUANGAN PERMINTAAN UANG MUKA OPERASIONAL
+                                        <div class="page-title-subheading">Berikut Permintaan Uang Muka Operasional</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
 
-                                <a href="<?php echo base_url('uangmuka_ops/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-warning">Halaman Input</a>
+                                <a href="<?php echo base_url('laporan_umkops/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-warning">Halaman Input</a>
 
-                                <a href="<?php echo base_url('uangmuka_ops/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
+                                <a href="<?php echo base_url('laporan_umkops/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
                                   
                                 
 
@@ -30,21 +30,18 @@
                                     <tr>
                                         <th width="2%">Detail</th>
                                         <th width="2%">No</th>
-                                        <th>Tanggal</th>
-                                        <th>NIK</th>
-                                        <th>Nama</th>
-                                        <th>Job Number</th>
-                                        <th>Klient</th>
-                                        <th>Vessel/Barge</th>
-                                        <th>Detail Job</th>
-                                        <th>Deskripsi</th>
-                                        <th>Nominal</th>
-                                        <th>NIK Pemilik Rekening</th>
-                                        <th>Nama Pemilik Rekening</th>
-                                        <th>Bank</th>
-                                        <th>No Rekening</th>
-                                        <th>Cabang</th>
-                                        <th>Keterangan</th>
+                                        <th>Petty Cash No</th>
+                                        <th>Advance Date</th>
+                                        <th>Submitted by</th>
+                                        <th>Description</th>
+                                        <th>Job No</th>
+                                        <th>Est Job Completed</th>
+                                        <th>Payment Rp</th>
+                                        <th>Account Name</th>
+                                        <th>Bank Name</th>
+                                        <th>Bank Account Number</th>
+                                        <th>Closing Date</th>
+                                        <th>Petty Cash No</th>
                                         <th width="15%">Opsi</th>
                                        
                                     </tr>
@@ -61,23 +58,23 @@
                                             </button></td>
 
                                         <td><?php echo $no;?></td>
-                                        <td><?php echo date("d-m-Y",strtotime($rowP->tanggal_uangmukaops))?></td>
-                                        <td><?php echo $rowP->nik_pegawai;?></td>
-                                        <td><?php echo $rowP->nama_pegawai;?></td>
-                                        <td><?php echo $rowP->jobno;?></td>
-                                        <td><?php echo $rowP->pt;?></td>
-                                        <td><?php echo $rowP->vessel_bg;?></td>
-                                        <td><?php echo $rowP->job_pekerjaannya;?></td>
-                                        <td><?php echo $rowP->deskripsi_uangmukaops;?></td>
-                                        <td><?php echo $rowP->nominal_uangmukaops;?></td>
-                                        <td><?php echo $rowP->nik_pegawai;?></td>
-                                        <td><?php echo $rowP->nama_pegawai;?></td>
-                                        <td><?php echo $rowP->nama_list_bank;?></td>
-                                        <td><?php echo $rowP->norek_bank;?></td>
-                                        <td><?php echo $rowP->cabang_bank;?></td>
-                                        <td><?php echo $rowP->ket_uangmukaops;?></td>
+                                        <td><?php echo $rowP->nopc_umkops;?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($rowP->tgl_mintaumkops))?></td>
+                                        <td><?php echo $rowP->nama_umkops;?></td>
+                                        <td><?php echo $rowP->deskripsi_umkops;?></td>
+                                        <td><?php echo $rowP->jobno_umkops;?></td>
+                                        <td><?php echo $rowP->estjob_umkops;?></td>
+                                        <td><?php echo $rowP->nominal_umkops;?></td>
+                                        <td><?php echo $rowP->namarek_umkops?></td>
+                                        <td><?php echo $rowP->bankrek_umkops;?></td>
+                                        <td><?php echo $rowP->norek_umkops;?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($rowP->tgl_lunas_umkops))?></td>
+                                        <td><?php echo $rowP->nopc_lunas_umkops;?></td>
+                                       
+                                        
+                                       
                                         <td>
-                                            <a href="<?php echo base_url('uangmuka_ops/editview/'. encrypt_url($rowP->id_uangmukaops)); ?>" class="btn btn-primary">
+                                            <a href="<?php echo base_url('laporan_umkops/editview/'. encrypt_url($rowP->id_laporan_umkops)); ?>" class="btn btn-primary">
                                             <i class="fa fa-pen fa-w-16"></i>
                                             </a>
 
@@ -100,13 +97,13 @@
                             </button>
                           </div>
 
-                          <form action="<?php echo base_url('uangmuka_ops/hapus') ?>" method="POST" enctype="multipart/form-data">
+                          <form action="<?php echo base_url('laporan_umkops/hapus') ?>" method="POST" enctype="multipart/form-data">
                           <div class="modal-body">
                              <!--Modal body-->
                                 <p class="text-semibold text-main"></p>
-                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->nama_pegawai ?></b> ? </p>
+                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->nama_umkops ?></b> ? </p>
 
-                                <input name="id"  type="hidden" value="<?php echo $rowP->id_uangmukaops ?>" class="form-control">
+                                <input name="id"  type="hidden" value="<?php echo $rowP->id_laporan_umkops ?>" class="form-control">
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">tutup</button>
