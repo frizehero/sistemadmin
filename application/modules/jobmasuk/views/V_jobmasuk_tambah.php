@@ -36,6 +36,14 @@
                                                     <input name="jobkode" value="C02" type="text" class="form-control" readonly>
                                                 </div>
                                             </div>
+
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Shipper</label>
+                                                    <input name="shipper"  type="text" class="form-control">
+                                                </div>
+                                            </div>
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
@@ -70,6 +78,27 @@
                                                 <div class="position-relative form-group">
                                                     <label class="">Tujuan</label>
                                                     <input name="tujuan"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Initial</label>
+                                                    <input name="Initial"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Final</label>
+                                                    <input name="final"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Quantity</label>
+                                                    <input name="quantity"  type="text" class="form-control">
                                                 </div>
                                             </div>
 

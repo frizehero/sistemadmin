@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2022 at 05:15 PM
+-- Generation Time: Apr 24, 2022 at 05:20 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -91,8 +91,6 @@ CREATE TABLE `data_pegawai` (
 --
 
 INSERT INTO `data_pegawai` (`id_data_pegawai`, `nama_pegawai`, `ket_pegawai`, `created_at`, `nik_pegawai`, `telepon_pegawai`, `ttd_pegawai`, `email_pegawai`, `bank_pegawai`, `norek_pegawai`, `cabangbank_pegawai`) VALUES
-(14, 'fffafasf', '2', '2022-04-15 09:06:03', '213123', 'a3123123', '', '', '', '', ''),
-(15, 'somad', '3', '2022-04-15 09:12:33', '64654', '456465', '', '', '', '', ''),
 (16, 'RULITHA AZARIA', '4', '2022-04-17 10:55:25', '10.20.2022', '081258257383', '', 'rulitha@gmail.com', 'BCA', '0987654', 'Malang');
 
 -- --------------------------------------------------------
@@ -142,9 +140,8 @@ CREATE TABLE `jobmasuk` (
 --
 
 INSERT INTO `jobmasuk` (`id_jobmasuk`, `jobno`, `pt`, `vessel_bg`, `eta`, `lokasi`, `tujuan`, `statusjob`, `created_at`, `jobkode`) VALUES
-(10, 'C0222010001-TDLVV-AF', 'PT.  TANAH BUMBU RESOURCES', 'MV. HAMMADA ', '2022-01-04', 'BUNATI', 'MALUKU, INDONESIA', 'WAITING', '2022-04-23 10:32:59', 'C02'),
-(11, 'c02.0000050', '', '', '0000-00-00', '', '', '', '2022-04-17 08:25:41', 'C02'),
-(12, 'C02. 500000', '', '', '0000-00-00', '', '', '', '2022-04-17 08:28:00', 'C02');
+(10, 'C0222010001-TDLVV-AF', 'PT.  TANAH BUMBU RESOURCES', 'MV. HAMMADA ', '0000-00-00', 'BUNATI', 'MALUKU, INDONESIA', 'WAITING', '2022-04-24 14:57:03', 'C02'),
+(13, 'C0222010002-DLVB-APP', 'PT.  TANAH BUMBU RESOURCES', 'BG. RIMAU/TB.RAMIU', '0000-00-00', 'BUNATI', 'PALANGKARAYA', 'WAITING', '2022-04-24 14:54:54', 'C02');
 
 -- --------------------------------------------------------
 
@@ -170,8 +167,40 @@ CREATE TABLE `jobmasuk_d` (
 --
 
 INSERT INTO `jobmasuk_d` (`id_jobmasuk_D02`, `jobno_D02`, `pt_D02`, `vessel_bg_D02`, `eta_D02`, `lokasi_D02`, `tujuan_D02`, `statusjob_D02`, `created_at`, `jobkode`) VALUES
-(2, 'D022220001', 'PT.  SUNGAI DANAU JAYA', 'BG. RIMAU / TB. SUTRA', '2022-10-20', 'MALANG', 'TUBAN', 'WAITING', '2022-04-23 11:14:34', 'D02'),
-(4, 'D020013TDL', '', '', '0000-00-00', '', '', '', '2022-04-17 06:12:34', 'D02');
+(2, 'D022220001', 'PT.  SUNGAI DANAU JAYA', 'BG. RIMAU / TB. SUTRA', '2022-10-20', 'MALANG', 'TUBAN', 'WAITING', '2022-04-23 11:14:34', 'D02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `laporan_umkops`
+--
+
+CREATE TABLE `laporan_umkops` (
+  `id_laporan_umkops` int(11) NOT NULL,
+  `nopc_umkops` varchar(20) DEFAULT NULL,
+  `tgl_mintaumkops` date DEFAULT NULL,
+  `deskripsi_umkops` varchar(100) DEFAULT NULL,
+  `jobno_umkops` varchar(30) DEFAULT NULL,
+  `estjob_umkops` date DEFAULT NULL,
+  `nominal_umkops` varchar(20) DEFAULT NULL,
+  `namarek_umkops` varchar(100) DEFAULT NULL,
+  `bankrek_umkops` varchar(50) DEFAULT NULL,
+  `norek_umkops` varchar(30) DEFAULT NULL,
+  `tgl_lunas_umkops` date DEFAULT NULL,
+  `nopc_lunas_umkops` varchar(20) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `nama_umkops` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `laporan_umkops`
+--
+
+INSERT INTO `laporan_umkops` (`id_laporan_umkops`, `nopc_umkops`, `tgl_mintaumkops`, `deskripsi_umkops`, `jobno_umkops`, `estjob_umkops`, `nominal_umkops`, `namarek_umkops`, `bankrek_umkops`, `norek_umkops`, `tgl_lunas_umkops`, `nopc_lunas_umkops`, `created_at`, `nama_umkops`) VALUES
+(1, 'PC001', '0000-00-00', 'BJB-ADVANCE/PT. ABC/MV. DEV', 'C02222', '0000-00-00', '500000', 'Nono', 'BCA', '03100101010', '0000-00-00', '', '2022-04-24 04:40:09', 'Nono'),
+(2, '', '0000-00-00', '', NULL, '0000-00-00', '', '', '', '', '0000-00-00', '', '2022-04-24 04:51:50', ''),
+(3, '', '0000-00-00', '', NULL, '0000-00-00', '', '', '', '', '0000-00-00', '', '2022-04-24 04:54:04', ''),
+(4, '', '0000-00-00', '', NULL, '0000-00-00', '', '', '', '', '0000-00-00', '', '2022-04-24 15:19:54', '');
 
 -- --------------------------------------------------------
 
@@ -196,7 +225,8 @@ INSERT INTO `list_data_bank` (`id_list_data_bank`, `id_data_pegawai`, `nama_list
 (30, '2', 'BCA', '123', 'SURABAYA', '2022-04-12 08:18:07'),
 (34, '14', 'BCA', '123456', 'SURABAYA', '2022-04-15 13:53:07'),
 (35, '14', 'BNI', '123456789', 'JOGJAKARTA', '2022-04-17 04:31:57'),
-(36, '16', 'BCA', '123', 'A', '2022-04-17 10:55:56');
+(37, '16', 'BCA', '7891234556', 'MALANG', '2022-04-24 15:02:59'),
+(38, '16', 'MANDIRI', '724221100', 'SURABAYA', '2022-04-24 15:03:22');
 
 -- --------------------------------------------------------
 
@@ -290,7 +320,7 @@ CREATE TABLE `uangmuka_ops` (
 --
 
 INSERT INTO `uangmuka_ops` (`id_uangmukaops`, `nik_pegawai`, `nama_pegawai`, `jobno`, `pt`, `vessel_bg`, `job_pekerjaannya`, `deskripsi_uangmukaops`, `nominal_uangmukaops`, `nama_pegawai_bank`, `norek_bank`, `cabang_bank`, `ket_uangmukaops`, `created_at`, `tanggal_uangmukaops`, `terakhir_setorklaim`, `status_umksebelumnya`, `nama_list_bank`) VALUES
-(1, '909090', 'k', 's', 'd', 'f', 'g', 'h', 'j', '', 'm', 'n', 'f', '2022-04-17 11:19:49', '2022-04-17', '0000-00-00', '', 'l');
+(5, '', '', 'C0222010001-TDLVV-AF', '', '', '', '', '', '', '', '', '', '2022-04-24 14:50:53', '0000-00-00', '0000-00-00', '', '');
 
 -- --------------------------------------------------------
 
@@ -343,6 +373,12 @@ ALTER TABLE `jobmasuk`
 --
 ALTER TABLE `jobmasuk_d`
   ADD PRIMARY KEY (`id_jobmasuk_D02`);
+
+--
+-- Indexes for table `laporan_umkops`
+--
+ALTER TABLE `laporan_umkops`
+  ADD PRIMARY KEY (`id_laporan_umkops`);
 
 --
 -- Indexes for table `list_data_bank`
@@ -412,7 +448,7 @@ ALTER TABLE `data_vendor`
 -- AUTO_INCREMENT for table `jobmasuk`
 --
 ALTER TABLE `jobmasuk`
-  MODIFY `id_jobmasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_jobmasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `jobmasuk_d`
@@ -421,10 +457,16 @@ ALTER TABLE `jobmasuk_d`
   MODIFY `id_jobmasuk_D02` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `laporan_umkops`
+--
+ALTER TABLE `laporan_umkops`
+  MODIFY `id_laporan_umkops` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `list_data_bank`
 --
 ALTER TABLE `list_data_bank`
-  MODIFY `id_list_data_bank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_list_data_bank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `list_data_divisi`
@@ -442,7 +484,7 @@ ALTER TABLE `tb_login`
 -- AUTO_INCREMENT for table `uangmuka_ops`
 --
 ALTER TABLE `uangmuka_ops`
-  MODIFY `id_uangmukaops` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_uangmukaops` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_level`

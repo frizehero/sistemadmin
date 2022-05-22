@@ -994,8 +994,8 @@ $menu = $uri_segments[2];
 </li>
                            
 
-                             <?php if ($menu=="beranda"){?><li class="mm-active"><?php }else{?><li><?php }?>
-                                       <a href="<?php echo base_url('beranda'); ?>">
+                             <?php if ($menu=="data_vendor"){?><li class="mm-active"><?php }else{?><li><?php }?>
+                                       <a href="<?php echo base_url('data_vendor'); ?>">
                                            <i class="metismenu-icon pe-7s-rocket"></i>DATA VENDOR
                                         </a>
                                     </li>
@@ -1013,6 +1013,26 @@ $menu = $uri_segments[2];
 
                                         <a href="<?php echo base_url('data_jabatan'); ?>">
                                            <i class="metismenu-icon pe-7s-airplay"></i>Data Jabatan
+                                        </a>
+
+                                        <a href="<?php echo base_url('data_bg'); ?>">
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Data Barge
+                                        </a>
+
+                                        <a href="<?php echo base_url('data_tb'); ?>">
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Data Tug Boat
+                                        </a>
+
+                                        <a href="<?php echo base_url('data_vessel'); ?>">
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Data Vessel
+                                        </a>
+
+                                        <a href="<?php echo base_url('data_klien'); ?>">
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Data Klien
+                                        </a>
+
+                                        <a href="<?php echo base_url('data_shipper'); ?>">
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Data Shipper
                                         </a>
 
                                         <a href="<?php echo base_url('inventory_room'); ?>">

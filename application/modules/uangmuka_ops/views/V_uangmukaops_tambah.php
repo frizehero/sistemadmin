@@ -182,7 +182,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
                                     <form class="">
-                                        <div class="form-row">
+                                        <div class="form-row"> 
 
                                            
                                         Nama                : 

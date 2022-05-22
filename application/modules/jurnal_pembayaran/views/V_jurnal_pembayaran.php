@@ -5,15 +5,15 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>JOB NUMBER C02
-                                        <div class="page-title-subheading">List Pekerjaan C02</div>
+                                    <div>LAPORAN KEUANGAN PERMINTAAN UANG MUKA OPERASIONAL
+                                        <div class="page-title-subheading">Berikut Permintaan Uang Muka Operasional</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
 
-                                <a href="<?php echo base_url('jobmasuk/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-warning">Halaman Input</a>
+                                <a href="<?php echo base_url('laporan_umkops/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-warning">Halaman Input</a>
 
-                                <a href="<?php echo base_url('jobmasuk/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
+                                <a href="<?php echo base_url('laporan_umkops/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
                                   
                                 
 
@@ -25,24 +25,23 @@
                         <div class="main-card mb-3 card">
                             <div class="card-body">
                                 
-
                                 <table style="width: 100%;" id="example"  class="table table-hover table-striped table-bordered">
                                     <thead>
                                     <tr>
                                         <th width="2%">Detail</th>
                                         <th width="2%">No</th>
-                                        <th width="15%">Job Number</th>
-                                        <th width="15%">Kategori Job</th>
-                                        <th width="15%">Vessel/Barge </th>
-                                        <th width="15%">Shipper </th>
-                                        <th width="15%">Klient</th>
-                                        <th width="7%">ETA</th>
-                                        <th width="7%">Lokasi</th>
-                                        <th width="7%">Tujuan</th>
-                                        <th width="7%">Initial</th>
-                                        <th width="7%">Final</th>
-                                        <th width="7%">Quantity</th>
-                                        <th width="7%">Status</th>
+                                        <th>Petty Cash No</th>
+                                        <th>Advance Date</th>
+                                        <th>Submitted by</th>
+                                        <th>Description</th>
+                                        <th>Job No</th>
+                                        <th>Est Job Completed</th>
+                                        <th>Payment Rp</th>
+                                        <th>Account Name</th>
+                                        <th>Bank Name</th>
+                                        <th>Bank Account Number</th>
+                                        <th>Closing Date</th>
+                                        <th>Petty Cash No</th>
                                         <th width="15%">Opsi</th>
                                        
                                     </tr>
@@ -57,31 +56,31 @@
                                         <td><button type="button" class="btn btn-warning">
                                             <i class="fa fa-search fa-w-16 fa-spin "></i>
                                             </button></td>
+
                                         <td><?php echo $no;?></td>
-                                        <td><?php echo $rowP->jobno;?></td>
-                                        <td><?php echo $rowP->jobkode;?></td>
-                                        <td><?php echo $rowP->vessel_bg;?></td>
-                                        <td><?php echo $rowP->shipper;?></td>
-                                        <td><?php echo $rowP->pt;?></td>
-                                        <td><?php echo date("d-m-Y",strtotime($rowP->eta))?></td>
-                                        <td><?php echo $rowP->lokasi;?></td>
-                                        <td><?php echo $rowP->tujuan;?></td>
-                                        <td><?php echo $rowP->initial;?></td>
-                                        <td><?php echo $rowP->final;?></td>
-                                        <td><?php echo $rowP->quantity;?></td>
-                                        <td><?php echo $rowP->statusjob;?></td>
+                                        <td><?php echo $rowP->nopc_umkops;?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($rowP->tgl_mintaumkops))?></td>
+                                        <td><?php echo $rowP->nama_umkops;?></td>
+                                        <td><?php echo $rowP->deskripsi_umkops;?></td>
+                                        <td><?php echo $rowP->jobno_umkops;?></td>
+                                        <td><?php echo $rowP->estjob_umkops;?></td>
+                                        <td><?php echo $rowP->nominal_umkops;?></td>
+                                        <td><?php echo $rowP->namarek_umkops?></td>
+                                        <td><?php echo $rowP->bankrek_umkops;?></td>
+                                        <td><?php echo $rowP->norek_umkops;?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($rowP->tgl_lunas_umkops))?></td>
+                                        <td><?php echo $rowP->nopc_lunas_umkops;?></td>
+                                       
+                                        
+                                       
                                         <td>
-                                            <a href="<?php echo base_url('jobmasuk/editview/'. encrypt_url($rowP->id_jobmasuk)); ?>" class="btn btn-primary">
+                                            <a href="<?php echo base_url('laporan_umkops/editview/'. encrypt_url($rowP->id_laporan_umkops)); ?>" class="btn btn-primary">
                                             <i class="fa fa-pen fa-w-16"></i>
                                             </a>
 
                                         <button class="btn btn-warning" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
                                         <i class="fa fa-trash fa-w-16"></i>
-                                        </button>
-
-                                        <button class="btn btn-danger" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
-                                        <i class="fa fa-times fa fa-w-16"></i>
-                                        </button>
+                                        </button?>
 
                                     </td>
 
@@ -98,13 +97,13 @@
                             </button>
                           </div>
 
-                          <form action="<?php echo base_url('jobmasuk/hapus') ?>" method="POST" enctype="multipart/form-data">
+                          <form action="<?php echo base_url('laporan_umkops/hapus') ?>" method="POST" enctype="multipart/form-data">
                           <div class="modal-body">
                              <!--Modal body-->
                                 <p class="text-semibold text-main"></p>
-                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->jobno ?></b> ? </p>
+                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->nama_umkops ?></b> ? </p>
 
-                                <input name="id"  type="hidden" value="<?php echo $rowP->id_jobmasuk ?>" class="form-control">
+                                <input name="id"  type="hidden" value="<?php echo $rowP->id_laporan_umkops ?>" class="form-control">
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">tutup</button>

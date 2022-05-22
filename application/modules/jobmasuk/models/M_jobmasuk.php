@@ -12,22 +12,30 @@ class M_jobmasuk extends CI_Model {
 	{
 		$jobno			= $this->input->post('jobno');
 		$jobkode		= $this->input->post('jobkode');
-		$pt   			= $this->input->post('pt');
 		$vessel_bg		= $this->input->post('vessel_bg');
+		$shipper   		= $this->input->post('shipper');
+		$pt   			= $this->input->post('pt');
 		$eta			= $this->input->post('eta');
 		$lokasi			= $this->input->post('lokasi');
 		$tujuan			= $this->input->post('tujuan');
+		$initial		= $this->input->post('initial');
+		$final			= $this->input->post('final');
+		$quantity		= $this->input->post('quantity');
 		$statusjob		= $this->input->post('statusjob');
 		
 
 				$data = array(
 					'jobno'			=> $jobno,
 					'jobkode'		=> $jobkode,
-					'pt'			=> $pt,
 					'vessel_bg'		=> $vessel_bg,
+					'shipper'		=> $shipper,
+					'pt'			=> $pt,
 					'eta'			=> $eta,
 					'lokasi'		=> $lokasi,
 					'tujuan'		=> $tujuan,
+					'initial'		=> $initial,
+					'final'			=> $final,
+					'quantity'		=> $quantity,
 					'statusjob'		=> $statusjob,
 					
 				);
@@ -50,11 +58,15 @@ class M_jobmasuk extends CI_Model {
 		$id 					= $this->input->post('id');
 		$jobno					= $this->input->post('jobno');
 		$jobkode				= $this->input->post('jobkode');
-		$pt						= $this->input->post('pt');
 		$vessel_bg				= $this->input->post('vessel_bg');
+		$shipper				= $this->input->post('shipper');
+		$pt						= $this->input->post('pt');
 		$eta					= $this->input->post('eta');
 		$lokasi					= $this->input->post('lokasi');
 		$tujuan					= $this->input->post('tujuan');
+		$initial				= $this->input->post('initial');
+		$final					= $this->input->post('final');
+		$quantity				= $this->input->post('quantity');
 		$statusjob				= $this->input->post('statusjob');
 
 
@@ -62,11 +74,15 @@ class M_jobmasuk extends CI_Model {
 				$data = array(
 					'jobno'				=> $jobno,
 					'jobkode'			=> $jobkode,
-					'pt'				=> $pt,
 					'vessel_bg'			=> $vessel_bg,
+					'shipper'			=> $shipper,
+					'pt'				=> $pt,
 					'eta'				=> $eta,
 					'lokasi'			=> $lokasi,
 					'tujuan'			=> $tujuan,
+					'initial'			=> $initial,
+					'final'				=> $final,
+					'quantity'			=> $quantity,
 					'statusjob'			=> $statusjob,
 				);
 				$this->db->where('id_jobmasuk',$id)->update('jobmasuk', $data);

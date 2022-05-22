@@ -5,17 +5,13 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>JOB NUMBER C02
-                                        <div class="page-title-subheading">List Pekerjaan C02</div>
+                                    <div>Data Vessel
+                                        <div class="page-title-subheading">Berikut List Vessel</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
-
-                                <a href="<?php echo base_url('jobmasuk/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-warning">Halaman Input</a>
-
-                                <a href="<?php echo base_url('jobmasuk/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
                                   
-                                
+                                  <a href="<?php echo base_url('data_vessel/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
 
                                 </div>    </div>
                         </div>
@@ -29,21 +25,11 @@
                                 <table style="width: 100%;" id="example"  class="table table-hover table-striped table-bordered">
                                     <thead>
                                     <tr>
-                                        <th width="2%">Detail</th>
-                                        <th width="2%">No</th>
-                                        <th width="15%">Job Number</th>
-                                        <th width="15%">Kategori Job</th>
-                                        <th width="15%">Vessel/Barge </th>
-                                        <th width="15%">Shipper </th>
-                                        <th width="15%">Klient</th>
-                                        <th width="7%">ETA</th>
-                                        <th width="7%">Lokasi</th>
-                                        <th width="7%">Tujuan</th>
-                                        <th width="7%">Initial</th>
-                                        <th width="7%">Final</th>
-                                        <th width="7%">Quantity</th>
-                                        <th width="7%">Status</th>
-                                        <th width="15%">Opsi</th>
+                                        <th>Detail</th>
+                                        <th>No</th>
+                                        <th width="20%">Nama Vessel</th>
+                                        <th width="20%">Keterangan Vessel</th>
+                                        <th>Opsi</th>
                                        
                                     </tr>
                                     </thead>
@@ -58,31 +44,16 @@
                                             <i class="fa fa-search fa-w-16 fa-spin "></i>
                                             </button></td>
                                         <td><?php echo $no;?></td>
-                                        <td><?php echo $rowP->jobno;?></td>
-                                        <td><?php echo $rowP->jobkode;?></td>
-                                        <td><?php echo $rowP->vessel_bg;?></td>
-                                        <td><?php echo $rowP->shipper;?></td>
-                                        <td><?php echo $rowP->pt;?></td>
-                                        <td><?php echo date("d-m-Y",strtotime($rowP->eta))?></td>
-                                        <td><?php echo $rowP->lokasi;?></td>
-                                        <td><?php echo $rowP->tujuan;?></td>
-                                        <td><?php echo $rowP->initial;?></td>
-                                        <td><?php echo $rowP->final;?></td>
-                                        <td><?php echo $rowP->quantity;?></td>
-                                        <td><?php echo $rowP->statusjob;?></td>
+                                        <td><?php echo $rowP->nama_vessel;?></td>
+                                        <td><?php echo $rowP->ket_vessel;?></td>
                                         <td>
-                                            <a href="<?php echo base_url('jobmasuk/editview/'. encrypt_url($rowP->id_jobmasuk)); ?>" class="btn btn-primary">
+                                            <a href="<?php echo base_url('data_vessel/editview/'. encrypt_url($rowP->id_vessel)); ?>" class="btn btn-primary">
                                             <i class="fa fa-pen fa-w-16"></i>
                                             </a>
 
                                         <button class="btn btn-warning" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
                                         <i class="fa fa-trash fa-w-16"></i>
                                         </button>
-
-                                        <button class="btn btn-danger" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
-                                        <i class="fa fa-times fa fa-w-16"></i>
-                                        </button>
-
                                     </td>
 
                                     </tr>
@@ -98,25 +69,21 @@
                             </button>
                           </div>
 
-                          <form action="<?php echo base_url('jobmasuk/hapus') ?>" method="POST" enctype="multipart/form-data">
+                          <form action="<?php echo base_url('data_vessel/hapus') ?>" method="POST" enctype="multipart/form-data">
                           <div class="modal-body">
                              <!--Modal body-->
                                 <p class="text-semibold text-main"></p>
-                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->jobno ?></b> ? </p>
+                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->nama_vessel ?></b> ? </p>
 
-                                <input name="id"  type="hidden" value="<?php echo $rowP->id_jobmasuk ?>" class="form-control">
+                                <input name="id"  type="hidden" value="<?php echo $rowP->id_vessel ?>" class="form-control">
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">tutup</button>
                             <button class="btn btn-primary" type="submit" >Hapus</button>
-
-
                           </div>
                           </form>
 
                         </div>
-
-                        
                       </div>
                     </div>
 

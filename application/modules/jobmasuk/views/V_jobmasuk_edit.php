@@ -38,6 +38,13 @@
                                                 </div>
                                             </div>
 
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Shipper</label>
+                                                    <input name="shipper" value="<?php echo $tampil['shipper']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
@@ -57,7 +64,8 @@
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">ETA</label>
-                                                    <input name="eta" value="<?php echo $tampil['eta']?>" type="text" class="form-control">
+                                                    <input name="eta" value="<?php echo $tampil['eta']?>" type="text" 
+                                                    class="form-control">
                                                 </div>
                                             </div>
 
@@ -74,6 +82,30 @@
                                                     <input name="tujuan" value="<?php echo $tampil['tujuan']?>" type="text" class="form-control">
                                                 </div>
                                             </div>
+
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Initial</label>
+                                                    <input name="initial" value="<?php echo $tampil['initial']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Final</label>
+                                                    <input name="final" value="<?php echo $tampil['final']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Quantity</label>
+                                                    <input name="quantity" value="<?php echo $tampil['quantity']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
 
                                         </div>
 
