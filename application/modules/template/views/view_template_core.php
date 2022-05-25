@@ -1035,9 +1035,18 @@ $menu = $uri_segments[2];
                                            <i class="metismenu-icon pe-7s-airplay"></i>Data Shipper
                                         </a>
 
-                                        <a href="<?php echo base_url('inventory_room'); ?>">
+                                        <a href="<?php echo base_url(''); ?>">
                                            <i class="metismenu-icon pe-7s-airplay"></i>Barges / Vessel
                                         </a>
+
+                                        <a href="<?php echo base_url('laporan_bgc'); ?>">
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Laporan Barges
+                                        </a>
+
+                                        <a href="<?php echo base_url('laporan_vesselc'); ?>">
+                                           <i class="metismenu-icon pe-7s-airplay"></i>Laporan Vessel
+                                        </a>
+
                                     </li>
                              
 </li>

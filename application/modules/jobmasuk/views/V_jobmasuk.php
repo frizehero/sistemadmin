@@ -29,11 +29,11 @@
                                 <table style="width: 100%;" id="example"  class="table table-hover table-striped table-bordered">
                                     <thead>
                                     <tr>
-                                        <th width="2%">Detail</th>
+                                        
                                         <th width="2%">No</th>
                                         <th width="15%">Job Number</th>
                                         <th width="15%">Kategori Job</th>
-                                        <th width="15%">Vessel/Barge </th>
+                                        <th width="15%">Vessel</th>
                                         <th width="15%">Shipper </th>
                                         <th width="15%">Klient</th>
                                         <th width="7%">ETA</th>
@@ -54,9 +54,7 @@
                                            
                                     foreach ($tampil AS $rowP ) { ?>
                                     <tr>
-                                        <td><button type="button" class="btn btn-warning">
-                                            <i class="fa fa-search fa-w-16 fa-spin "></i>
-                                            </button></td>
+                                        
                                         <td><?php echo $no;?></td>
                                         <td><?php echo $rowP->jobno;?></td>
                                         <td><?php echo $rowP->jobkode;?></td>

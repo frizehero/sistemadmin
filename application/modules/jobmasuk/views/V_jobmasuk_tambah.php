@@ -5,8 +5,8 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>Tambah Data Ruangan
-                                        <div class="page-title-subheading">Tambah Data Ruangan, Silahkan Isi semua form di bawah ini dengan lengkap...</div>
+                                    <div>Tambah Job Number C02
+                                        <div class="page-title-subheading">Silahkan Isi semua form di bawah ini dengan lengkap...</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
@@ -41,21 +41,49 @@
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Shipper</label>
-                                                    <input name="shipper"  type="text" class="form-control">
+
+
+                                                    <select name="shipper"  class="multiselect-dropdown form-control">
+                                                        <?php
+                                                        foreach($pilshipper AS $rowP) { ?>
+                                                        <option value="<?php echo $rowP->nama_shipper;?>" ><?php echo $rowP->nama_shipper;?></option>
+
+                                                        <?php }?>
+                                                        </select>
                                                 </div>
                                             </div>
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Klient</label>
-                                                    <input name="pt"  type="text" class="form-control">
+
+
+                                                    <select name="pt"  class="multiselect-dropdown form-control">
+                                                        <?php
+                                                        foreach($pilpt AS $rowP) { ?>
+                                                        <option value="<?php echo $rowP->nama_klien;?>" ><?php echo $rowP->nama_klien;?></option>
+
+                                                        <?php }?>
+
+                                                    </select>
+
+
                                                 </div>
                                             </div>
 
+
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Vessel/Barge</label>
-                                                    <input name="vessel_bg"  type="text" class="form-control">
+                                                    <label class="">Vessel</label>
+
+                                                    <select name="vessel_bg"  class="multiselect-dropdown form-control">
+
+                                                        <?php
+                                                        foreach($pilvessel AS $rowP) { ?>
+                                                        <option value="<?php echo $rowP->nama_vessel;?>" ><?php echo $rowP->nama_vessel;?></option>
+
+                                                        <?php }?>
+                                                        </select>
                                                 </div>
                                             </div>
                                         </div>

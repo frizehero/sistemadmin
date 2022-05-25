@@ -8,6 +8,23 @@ class M_jobmasuk extends CI_Model {
 		return $this->db->get('jobmasuk')->result();
 	}
 
+	function pilpt()
+	{
+		return $this->db->get('data_klien')->result();
+	}
+
+	function pilshipper()
+	{
+		return $this->db->get('data_shipper')->result();
+	}
+
+	function pilvessel()
+	{
+		return $this->db->get('data_vessel')->result();
+	}
+
+
+
 	function tambah()
 	{
 		$jobno			= $this->input->post('jobno');

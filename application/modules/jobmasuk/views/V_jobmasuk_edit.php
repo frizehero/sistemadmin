@@ -55,7 +55,7 @@
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Vessel / Barge</label>
+                                                    <label class="">Vessel</label>
                                                     <input name="vessel_bg" value="<?php echo $tampil['vessel_bg']?>" type="text" class="form-control">
                                                 </div>
                                             </div>

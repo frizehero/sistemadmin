@@ -29,6 +29,9 @@ class Jobmasuk_d extends MX_Controller {
 		$data = array(
 			'namamodule' 	=> "jobmasuk_d",
 			'namafileview' 	=> "V_jobmasukd_tambah",
+			'pilpt'			=> $this->M_jobmasuk_d->pilpt(),
+			'pilshipper'	=> $this->M_jobmasuk_d->pilshipper(),
+			'pilvessel'		=> $this->M_jobmasuk_d->pilvessel(),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}

@@ -37,21 +37,57 @@
                                                 </div>
                                             </div>
 
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Shipper</label>
+
+
+                                                    <select name="shipper_D02"  class="multiselect-dropdown form-control">
+                                                        <?php
+                                                        foreach($pilshipper AS $rowP) { ?>
+                                                        <option value="<?php echo $rowP->nama_shipper;?>" ><?php echo $rowP->nama_shipper;?></option>
+
+                                                        <?php }?>
+                                                        </select>
+                                                </div>
+                                            </div>
+
                                             
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Klient</label>
-                                                    <input name="pt_D02"  type="text" class="form-control">
+
+
+                                                    <select name="pt_D02"  class="multiselect-dropdown form-control">
+                                                        <?php
+                                                        foreach($pilpt AS $rowP) { ?>
+                                                        <option value="<?php echo $rowP->nama_klien;?>" ><?php echo $rowP->nama_klien;?></option>
+
+                                                        <?php }?>
+
+                                                    </select>
+
+
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
-                                                    <label class="">Vessel/Barge</label>
-                                                    <input name="vessel_bg_D02"  type="text" class="form-control">
+                                                    <label class="">Vessel</label>
+
+                                                    <select name="vessel_bg_D02"  class="multiselect-dropdown form-control">
+
+                                                        <?php
+                                                        foreach($pilvessel AS $rowP) { ?>
+                                                        <option value="<?php echo $rowP->nama_vessel;?>" ><?php echo $rowP->nama_vessel;?></option>
+
+                                                        <?php }?>
+                                                        </select>
                                                 </div>
                                             </div>
                                         </div>
+
+
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
@@ -73,6 +109,29 @@
                                                     <input name="tujuan_D02"  type="text" class="form-control">
                                                 </div>
                                             </div>
+
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Initial</label>
+                                                    <input name="initial_D02"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Final</label>
+                                                    <input name="final_D02"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Quantity</label>
+                                                    <input name="quantity_D02"  type="text" class="form-control">
+                                                </div>
+                                            </div>
+
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
