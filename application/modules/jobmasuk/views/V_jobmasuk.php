@@ -56,7 +56,10 @@
                                     <tr>
                                         
                                         <td><?php echo $no;?></td>
-                                        <td><?php echo $rowP->jobno;?></td>
+                                        <td>
+                                             <a href="<?php echo base_url('laporan_bgc/tampilbgc/'. encrypt_url($rowP->jobno)); ?>">
+                                         <?php echo $rowP->jobno;?>
+                                            </a></td>
                                         <td><?php echo $rowP->jobkode;?></td>
                                         <td><?php echo $rowP->vessel_bg;?></td>
                                         <td><?php echo $rowP->shipper;?></td>

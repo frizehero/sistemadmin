@@ -24,6 +24,13 @@
                                         <div class="form-row">
                                             <input name="id" value="<?php echo $tampil['id_lap_C02']?>" type="hidden" class="form-control">
 
+                                             <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Job Number</label>
+                                                    <input name="bgc_jobno"  type="text" value="<?php echo $tampil['bgc_jobno'];?>" class="form-control" readonly>
+                                                </div>
+                                            </div>
+
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">LOT</label>

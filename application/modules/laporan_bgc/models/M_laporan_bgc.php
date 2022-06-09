@@ -8,6 +8,13 @@ class M_laporan_bgc extends CI_Model {
 		return $this->db->get('laporan_bgc')->result();
 	}
 
+	function tampil_jobno($id)
+	{
+		$idnya=decrypt_url($id);
+		$this->db->where('bgc_jobno',$idnya);
+    	return $this->db->get('laporan_bgc')->result();
+	}
+
 	function tambahbg()
 	{
 		$nama_bg 	= $this->input->post('nama_bg');
@@ -49,6 +56,7 @@ class M_laporan_bgc extends CI_Model {
 
 	function tambah()
 	{
+		$bgc_jobno					= $this->input->post('bgc_jobno');
 		$lot_bgc					= $this->input->post('lot_bgc');
 		$barges_C02					= $this->input->post('barges_C02');
 		$tugboat_C02				= $this->input->post('tugboat_C02');
@@ -63,6 +71,7 @@ class M_laporan_bgc extends CI_Model {
 				
 
 				$data = array(
+					'bgc_jobno'					=> $bgc_jobno,
 					'lot_bgc'					=> $lot_bgc,
 					'barges_C02'				=> $barges_C02,
 					'tugboat_C02'				=> $tugboat_C02,

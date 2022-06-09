@@ -19,11 +19,18 @@
                         <div class="col-md-6">
                         <div class="main-card mb-3 card">
 
-                             <form action="<?php echo base_url('laporan_bgc/tambahbg') ?>" method="POST" enctype="multipart/form-data">
+                             <form action="<?php echo base_url('laporan_bgc/tambah') ?>" method="POST" enctype="multipart/form-data">
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
                                     <form class="">
                                         <div class="form-row">
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">Job Number</label>
+                                                    <input name="bgc_jobno"  type="text" value="<?php echo $tampil_jobno;?>" class="form-control" readonly>
+                                                </div>
+                                            </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
@@ -47,10 +54,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                            
-
-                            <form action="<?php echo base_url('laporan_bgc/tambahtb') ?>" method="POST" enctype="multipart/form-data">
-                                            
+                                                                        
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Tugboat</label>
@@ -134,7 +138,7 @@
                                         </div>
 
                                         <button class="mt-2 btn btn-primary"  type="submit" >Simpan Data</button>
-                                    </form>
+                                   
                                 </div>
 
                                 </form>

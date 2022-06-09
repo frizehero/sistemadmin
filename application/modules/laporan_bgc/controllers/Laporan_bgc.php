@@ -24,14 +24,27 @@ class Laporan_bgc extends MX_Controller {
 		echo Modules::run('template/tampilCore', $data);
 	}
 
+	// ambil bgc_no
+	function tampilbgc($id)
+	{
+		$data = array(
+			'namamodule' 	=> "laporan_bgc",
+			'namafileview' 	=> "V_laporan_bgc",
+			'tampil'		=> $this->M_laporan_bgc->tampil_jobno($id),
+			'tampil_jobno'		=> decrypt_url($id),
+		);
+		echo Modules::run('template/tampilCore', $data);
+	}
+
 		// halaman tambah
-	function tambahview()
+	function tambahview($id)
 	{
 		$data = array(
 			'namamodule' 	=> "laporan_bgc",
 			'namafileview' 	=> "V_laporanbgc_tambah",
 			'pilbg'			=> $this->M_laporan_bgc->pilbg(),
 			'piltb'			=> $this->M_laporan_bgc->piltb(),
+			'tampil_jobno'		=> decrypt_url($id),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
@@ -69,17 +82,19 @@ class Laporan_bgc extends MX_Controller {
 
 	function tambah()
 	{
+		$bgc_jobno	= $this->input->post('bgc_jobno');
 
 		$this->M_laporan_bgc->tambah();
-		redirect('laporan_bgc');
+		redirect('laporan_bgc/tampilbgc/'.encrypt_url($bgc_jobno));
 		
 		//redirect('laporan_bgc');
 	}
 
 	function edit()
 	{
+		$bgc_jobno	= $this->input->post('bgc_jobno');
 		$this->M_laporan_bgc->edit();
-		redirect('laporan_bgc');
+		redirect('laporan_bgc/tampilbgc/'.encrypt_url($bgc_jobno));
 	}
 
 	function hapus()

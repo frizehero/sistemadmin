@@ -11,7 +11,7 @@
                                 </div>
                                 <div class="page-title-actions">
                                   
-                                  <a href="<?php echo base_url('laporan_bgc/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
+                                  <a href="<?php echo base_url('laporan_bgc/tambahview/'.encrypt_url($tampil_jobno)); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
 
                                 </div>    </div>
                         </div>
@@ -25,8 +25,8 @@
                                 <table style="width: 100%;" id="example"  class="table table-hover table-striped table-bordered">
                                     <thead>
                                     <tr>
-                                        <th>Detail</th>
                                         <th>No</th>
+                                        <th width="20%">Job No</th>
                                         <th width="20%">LOT</th>
                                         <th width="20%">Barge</th>
                                         <th width="20%">Tugboat</th>
@@ -49,10 +49,8 @@
                                            
                                     foreach ($tampil AS $rowP ) { ?>
                                     <tr>
-                                        <td><button type="button" class="btn btn-warning">
-                                            <i class="fa fa-search fa-w-16 fa-spin "></i>
-                                            </button></td>
                                         <td><?php echo $no;?></td>
+                                        <td><?php echo $rowP->bgc_jobno;?></td>
                                         <td><?php echo $rowP->lot_bgc;?></td>
                                         <td><?php echo $rowP->barges_C02;?></td>
                                         <td><?php echo $rowP->tugboat_C02;?></td>
