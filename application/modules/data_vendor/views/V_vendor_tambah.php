@@ -5,8 +5,8 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>Tambah Data Ruangan
-                                        <div class="page-title-subheading">Tambah Data Ruangan, Silahkan Isi semua form di bawah ini dengan lengkap...</div>
+                                    <div>Tambah Data Vendor
+                                        <div class="page-title-subheading">Silahkan Isi semua form di bawah ini dengan lengkap...</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
@@ -44,6 +44,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">

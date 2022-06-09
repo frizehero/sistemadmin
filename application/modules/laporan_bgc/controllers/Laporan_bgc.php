@@ -9,6 +9,7 @@ class Laporan_bgc extends MX_Controller {
 		// model
 		 $this->load->model('M_laporan_bgc');
 		 $this->load->model('login/m_session');
+		 // tes github
 	}
 
 	
@@ -29,6 +30,8 @@ class Laporan_bgc extends MX_Controller {
 		$data = array(
 			'namamodule' 	=> "laporan_bgc",
 			'namafileview' 	=> "V_laporanbgc_tambah",
+			'pilbg'			=> $this->M_laporan_bgc->pilbg(),
+			'piltb'			=> $this->M_laporan_bgc->piltb(),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
@@ -43,6 +46,24 @@ class Laporan_bgc extends MX_Controller {
 			'tampil'		=> $this->M_laporan_bgc->tampiledit($id),
 		);
 		echo Modules::run('template/tampilCore', $data);
+	}
+
+	function tambahbg()
+	{
+
+		$this->M_laporan_bgc->tambahbg();
+		redirect('laporan_bgc');
+		
+		//redirect('data_bg');
+	}
+
+	function tambahtb()
+	{
+
+		$this->M_laporan_bgc->tambahtb();
+		redirect('laporan_bgc');
+		
+		//redirect('data_bg');
 	}
 
 

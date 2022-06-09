@@ -64,8 +64,8 @@
                                         <td><?php echo date("d-m-Y",strtotime($rowP->eta))?></td>
                                         <td><?php echo $rowP->lokasi;?></td>
                                         <td><?php echo $rowP->tujuan;?></td>
-                                        <td><?php echo $rowP->initial;?></td>
-                                        <td><?php echo $rowP->final;?></td>
+                                         <td><?php echo date("d-m-Y",strtotime($rowP->initial))?></td>
+                                         <td><?php echo date("d-m-Y",strtotime($rowP->final))?></td>
                                         <td><?php echo $rowP->quantity;?></td>
                                         <td><?php echo $rowP->statusjob;?></td>
                                         <td>

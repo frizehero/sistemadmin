@@ -17,11 +17,20 @@
                         <div class="col-md-6">
                         <div class="main-card mb-3 card">
 
+
+
                             <form action="<?php echo base_url('laporan_vesselc/tambah') ?>" method="POST" enctype="multipart/form-data">
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
                                     <form class="">
                                         <div class="form-row">
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">LOT</label>
+                                                    <input name="lotv_C02"  type="text" class="form-control">
+                                                </div>
+                                            </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
@@ -40,7 +49,7 @@
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">From</label>
-                                                    <input name="fromv_C02"  type="text" class="form-control">
+                                                    <input name="fromv_C02"  type="date" class="form-control">
                                                 </div>
                                             </div>
 
@@ -49,7 +58,7 @@
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">To</label>
-                                                    <input name="tov_C02"  type="text" class="form-control">
+                                                    <input name="tov_C02"  type="date" class="form-control">
                                                 </div>
                                             </div>
 

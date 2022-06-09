@@ -24,7 +24,12 @@
                                         <div class="form-row">
                                             <input name="id" value="<?php echo $tampil['id_lapvessel_C02']?>" type="hidden" class="form-control">
 
-                                             
+                                             <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">LOT</label>
+                                                    <input name="lotv_C02" value="<?php echo $tampil['lotv_C02']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
 
                                              <div class="col-md-12">
                                                 <div class="position-relative form-group">

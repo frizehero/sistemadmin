@@ -24,6 +24,14 @@
                                         <div class="form-row">
                                             <input name="id" value="<?php echo $tampil['id_lap_C02']?>" type="hidden" class="form-control">
 
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group">
+                                                    <label class="">LOT</label>
+                                                    <input name="lot_bgc" value="<?php echo $tampil['lot_bgc']?>" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+
                                              <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Barge</label>
@@ -41,14 +49,14 @@
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">From</label>
-                                                    <input name="from_C02" value="<?php echo $tampil['from_C02']?>" type="text" class="form-control">
+                                                    <input name="from_C02" value="<?php echo $tampil['from_C02']?>" type="date" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">To</label>
-                                                    <input name="to_C02" value="<?php echo $tampil['to_C02']?>" type="text" class="form-control">
+                                                    <input name="to_C02" value="<?php echo $tampil['to_C02']?>" type="date" class="form-control">
                                                 </div>
                                             </div>
 

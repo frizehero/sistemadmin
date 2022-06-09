@@ -27,6 +27,7 @@
                                     <tr>
                                         <th>Detail</th>
                                         <th>No</th>
+                                        <th width="20%">LOT</th>
                                         <th width="20%">Barge</th>
                                         <th width="20%">Tugboat</th>
                                         <th width="20%">From</th>
@@ -52,10 +53,11 @@
                                             <i class="fa fa-search fa-w-16 fa-spin "></i>
                                             </button></td>
                                         <td><?php echo $no;?></td>
+                                        <td><?php echo $rowP->lotv_C02;?></td>
                                         <td><?php echo $rowP->bargesv_C02;?></td>
                                         <td><?php echo $rowP->tugboatv_C02;?></td>
-                                        <td><?php echo $rowP->fromv_C02;?></td>
-                                        <td><?php echo $rowP->tov_C02;?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($rowP->fromv_C02))?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($rowP->tov_C02))?></td>
                                         <td><?php echo $rowP->quantityv_C02;?></td>
                                         <td><?php echo $rowP->jettyv_C02;?></td>
                                         <td><?php echo $rowP->remarkv_C02;?></td>

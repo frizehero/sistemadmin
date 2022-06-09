@@ -28,7 +28,7 @@
                                                 <div class="position-relative form-group">
                                                     <label class="">Tanggal</label>
                                                     <i class="fa fa-calendar fa-w-16"></i>
-                                                    <input name="tanggal_uangmukaops"  value="<?php echo $tampil['tanggal_uangmukaops']?>" type="text" class="form-control">
+                                                    <input name="tanggal_uangmukaops"  value="<?php echo $tampil['tanggal_uangmukaops']?>" type="date" class="form-control">
                                                 </div>
                                             </div>
 

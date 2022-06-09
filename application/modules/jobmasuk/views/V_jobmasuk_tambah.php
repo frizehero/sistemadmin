@@ -91,7 +91,8 @@
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">ETA</label>
-                                                     <textarea name="eta" class="form-control"></textarea>
+                                                     <input name="eta" type="date" class="form-control"></input>
+                                                     
                                                 </div>
                                             </div>
 
@@ -112,14 +113,14 @@
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Initial</label>
-                                                    <input name="Initial"  type="text" class="form-control">
+                                                    <input name="initial" type="date" class="form-control"></input>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group">
                                                     <label class="">Final</label>
-                                                    <input name="final"  type="text" class="form-control">
+                                                    <input name="final" type="date" class="form-control"></input>
                                                 </div>
                                             </div>
 

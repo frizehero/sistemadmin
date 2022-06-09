@@ -10,6 +10,7 @@ class M_laporan_vesselc extends CI_Model {
 
 	function tambah()
 	{
+		$lotv_C02 					= $this->input->post('lotv_C02');
 		$bargesv_C02 				= $this->input->post('bargesv_C02');
 		$tugboatv_C02 				= $this->input->post('tugboatv_C02');
 		$fromv_C02			 		= $this->input->post('tov_C02');
@@ -23,6 +24,7 @@ class M_laporan_vesselc extends CI_Model {
 		
 
 				$data = array(
+					'lotv_C02'					=> $lotv_C02,
 					'bargesv_C02'				=> $bargesv_C02,
 					'tugboatv_C02'				=> $tugboatv_C02,
 					'tov_C02'					=> $tov_C02,
@@ -54,6 +56,7 @@ class M_laporan_vesselc extends CI_Model {
 	function edit()
 	{
 		$id 						= $this->input->post('id');
+		$lotv_C02 					= $this->input->post('lotv_C02');
 		$bargesv_C02 				= $this->input->post('bargesv_C02');
 		$tugboatv_C02 				= $this->input->post('tugboatv_C02');
 		$fromv_C02			 		= $this->input->post('tov_C02');
@@ -67,6 +70,7 @@ class M_laporan_vesselc extends CI_Model {
 		
 		
 				$data = array(
+					'lotv_C02'					=> $lotv_C02,
 					'bargesv_C02'				=> $bargesv_C02,
 					'tugboatv_C02'				=> $tugboatv_C02,
 					'tov_C02'					=> $tov_C02,
