@@ -5,17 +5,13 @@
                                     <div class="page-title-icon">
                                         <i class="pe-7s-medal icon-gradient bg-tempting-azure"></i>
                                     </div>
-                                    <div>JOB NUMBER C02
-                                        <div class="page-title-subheading">List Pekerjaan C02</div>
+                                    <div>Laporan Pekerjaan Barge
+                                        <div class="page-title-subheading">Job Number D02</div>
                                     </div>
                                 </div>
                                 <div class="page-title-actions">
-
-                                <a href="<?php echo base_url('jobmasuk/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-warning">Halaman Input</a>
-
-                                <a href="<?php echo base_url('jobmasuk/tambahview'); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
                                   
-                                
+                                  <a href="<?php echo base_url('laporan_bgc/tambahview/'.encrypt_url($tampil_jobnod)); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
 
                                 </div>    </div>
                         </div>
@@ -29,21 +25,20 @@
                                 <table style="width: 100%;" id="example"  class="table table-hover table-striped table-bordered">
                                     <thead>
                                     <tr>
-                                        
-                                        <th width="2%">No</th>
-                                        <th width="15%">Job Number</th>
-                                        <th width="15%">Kategori Job</th>
-                                        <th width="15%">Vessel</th>
-                                        <th width="15%">Shipper </th>
-                                        <th width="15%">Klient</th>
-                                        <th width="7%">ETA</th>
-                                        <th width="7%">Lokasi</th>
-                                        <th width="7%">Tujuan</th>
-                                        <th width="7%">Initial</th>
-                                        <th width="7%">Final</th>
-                                        <th width="7%">Quantity</th>
-                                        <th width="7%">Status</th>
-                                        <th width="15%">Opsi</th>
+                                        <th>No</th>
+                                        <th width="20%">Job No</th>
+                                        <th width="20%">LOT</th>
+                                        <th width="20%">Barge</th>
+                                        <th width="20%">Tugboat</th>
+                                        <th width="20%">From</th>
+                                        <th width="20%">To</th>
+                                        <th width="20%">Quantity</th>
+                                        <th width="20%">Jetty</th>
+                                        <th width="20%">Remark</th>
+                                        <th width="20%">Surveyor</th>
+                                        <th width="20%">Sampler</th>
+                                        <th width="20%">Detail</th>
+                                        <th>Opsi</th>
                                        
                                     </tr>
                                     </thead>
@@ -54,37 +49,27 @@
                                            
                                     foreach ($tampil AS $rowP ) { ?>
                                     <tr>
-                                        
                                         <td><?php echo $no;?></td>
+                                        <td><?php echo $rowP->bgd_jobno;?></td>
+                                        <td><?php echo $rowP->lot_bgd;?></td>
+                                        <td><?php echo $rowP->barges_D02;?></td>
+                                        <td><?php echo $rowP->tugboat_D02;?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($rowP->from_D02))?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($rowP->to_D02))?></td>
+                                        <td><?php echo $rowP->quantity_D02;?></td>
+                                        <td><?php echo $rowP->jetty_D02;?></td>
+                                        <td><?php echo $rowP->remark_D02;?></td>
+                                        <td><?php echo $rowP->surveyor_D02;?></td>
+                                        <td><?php echo $rowP->sampler_D02;?></td>
+                                        <td><?php echo $rowP->notes_D02;?></td>
                                         <td>
-                                             <a href="<?php echo base_url('laporan_bgc/tampilbgc/'. encrypt_url($rowP->jobno)); ?>">
-                                         <?php echo $rowP->jobno;?>
-                                         
-                                            </a></td>
-                                        <td><?php echo $rowP->jobkode;?></td>
-                                        <td><?php echo $rowP->vessel_bg;?></td>
-                                        <td><?php echo $rowP->shipper;?></td>
-                                        <td><?php echo $rowP->pt;?></td>
-                                        <td><?php echo date("d-m-Y",strtotime($rowP->eta))?></td>
-                                        <td><?php echo $rowP->lokasi;?></td>
-                                        <td><?php echo $rowP->tujuan;?></td>
-                                         <td><?php echo date("d-m-Y",strtotime($rowP->initial))?></td>
-                                         <td><?php echo date("d-m-Y",strtotime($rowP->final))?></td>
-                                        <td><?php echo $rowP->quantity;?></td>
-                                        <td><?php echo $rowP->statusjob;?></td>
-                                        <td>
-                                            <a href="<?php echo base_url('jobmasuk/editview/'. encrypt_url($rowP->id_jobmasuk)); ?>" class="btn btn-primary">
+                                            <a href="<?php echo base_url('laporan_bgd/editview/'. encrypt_url($rowP->id_lap_D02)); ?>" class="btn btn-primary">
                                             <i class="fa fa-pen fa-w-16"></i>
                                             </a>
 
                                         <button class="btn btn-warning" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
                                         <i class="fa fa-trash fa-w-16"></i>
                                         </button>
-
-                                        <button class="btn btn-danger" data-toggle="modal" data-target="#hapus<?php echo $no ?>">
-                                        <i class="fa fa-times fa fa-w-16"></i>
-                                        </button>
-
                                     </td>
 
                                     </tr>
@@ -100,25 +85,21 @@
                             </button>
                           </div>
 
-                          <form action="<?php echo base_url('jobmasuk/hapus') ?>" method="POST" enctype="multipart/form-data">
+                          <form action="<?php echo base_url('laporan_bgd/hapus') ?>" method="POST" enctype="multipart/form-data">
                           <div class="modal-body">
                              <!--Modal body-->
                                 <p class="text-semibold text-main"></p>
-                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->jobno ?></b> ? </p>
+                                <p>Anda Yakin Ingin Menghapus <b><?php echo $rowP->barges_C02 ?></b> ? </p>
 
-                                <input name="id"  type="hidden" value="<?php echo $rowP->id_jobmasuk ?>" class="form-control">
+                                <input name="id"  type="hidden" value="<?php echo $rowP->id_lap_D02 ?>" class="form-control">
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">tutup</button>
                             <button class="btn btn-primary" type="submit" >Hapus</button>
-
-
                           </div>
                           </form>
 
                         </div>
-
-                        
                       </div>
                     </div>
 
@@ -131,6 +112,10 @@
                                     </tbody>
                                     
                                 </table>
+
+
+
+                                
                             </div>
                         </div>
                     </div>
