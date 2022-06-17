@@ -31,7 +31,8 @@ class Laporan_bgc extends MX_Controller {
 			'namamodule' 	=> "laporan_bgc",
 			'namafileview' 	=> "V_laporan_bgc",
 			'tampil'		=> $this->M_laporan_bgc->tampil_jobno($id),
-			'tampil_jobno'		=> decrypt_url($id),
+			'tampil_jobno'		=> $id,
+			'tampil_masuk'		=> $this->M_laporan_bgc->tampil_jobmasuk($id),
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
@@ -85,7 +86,7 @@ class Laporan_bgc extends MX_Controller {
 		$bgc_jobno	= $this->input->post('bgc_jobno');
 
 		$this->M_laporan_bgc->tambah();
-		redirect('laporan_bgc/tampilbgc/'.encrypt_url($bgc_jobno));
+		redirect('laporan_bgc/tampilbgc/'.$bgc_jobno);
 		
 		//redirect('laporan_bgc');
 	}
@@ -94,7 +95,7 @@ class Laporan_bgc extends MX_Controller {
 	{
 		$bgc_jobno	= $this->input->post('bgc_jobno');
 		$this->M_laporan_bgc->edit();
-		redirect('laporan_bgc/tampilbgc/'.encrypt_url($bgc_jobno));
+		redirect('laporan_bgc/tampilbgc/'.$bgc_jobno);
 	}
 
 	function hapus()

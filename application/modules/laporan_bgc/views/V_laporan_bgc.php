@@ -11,12 +11,89 @@
                                 </div>
                                 <div class="page-title-actions">
                                   
-                                  <a href="<?php echo base_url('laporan_bgc/tambahview/'.encrypt_url($tampil_jobno)); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
+                                  <a href="<?php echo base_url('laporan_bgc/tambahview/'.$tampil_jobno); ?>" class="mb-2 mr-2 btn btn-shadow btn-success">Tambah Data</a>
 
                                 </div>    </div>
                         </div>
 
                         <?php tampilnotif()?>
+
+                         <div class="col-md-6">
+                        <div class="main-card mb-3 card">
+
+                                <div class="card-body">
+                                    <h5 class="card-title"></h5>
+                                    <form class="">
+                                        <div class="form-row">
+
+                                            <div class="col-md-12">
+                                                <div class="position-relative">
+                                                    <label class=""><b>Job Number : </b></label>
+                                                    <label class=""><?php echo $tampil_jobno?></label>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="position-relative ">
+                                                    <label class=""><b>Vessel Name : </b></label>
+                                                    <label class=""><?php echo $tampil_masuk['vessel_bg']?></label>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="position-relative ">
+                                                    <label class=""><b>Shipper :  </b></label>
+                                                     <label class=""><?php echo $tampil_masuk['shipper']?></label>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="position-relative">
+                                                    <label class=""><b>Client :  </b></label>
+                                                    <label class=""><?php echo $tampil_masuk['pt']?></label>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="position-relative ">
+                                                    <label class=""><b>Loading Port : </b></label>
+                                                    <label class=""><?php echo $tampil_masuk['lokasi']?></label>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="position-relative ">
+                                                    <label class=""><b>Discharging port :  </b></label>
+                                                     <label class=""><?php echo $tampil_masuk['tujuan']?></label>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="position-relative ">
+                                                    <label class=""><b>Date of initial :  </b></label>
+                                                     <label class=""><?php echo $tampil_masuk['initial']?></label>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="position-relative">
+                                                    <label class=""><b>Date of final :  </b></label>
+                                                     <label class=""><?php echo $tampil_masuk['final']?></label>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="position-relative">
+                                                    <label class=""><b>Quantity on DSR : </b> </label>
+                                                     <label class=""><?php echo $tampil_masuk['quantity']?> MT</label>
+                                                </div>
+                                            </div>
+
+                                          
+                                            
+
+
+                                            
+                                        </div>
+
+                                   
+                                </div>
+
+
+                                </div>
+                                </div>
 
                         <div class="main-card mb-3 card">
                             <div class="card-body">

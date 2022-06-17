@@ -57,7 +57,7 @@
                                         
                                         <td><?php echo $no;?></td>
                                         <td>
-                                             <a href="<?php echo base_url('laporan_bgc/tampilbgc/'. encrypt_url($rowP->jobno)); ?>">
+                                             <a href="<?php echo base_url('laporan_bgc/tampilbgc/'.$rowP->jobno); ?>">
                                          <?php echo $rowP->jobno;?>
                                          
                                             </a></td>

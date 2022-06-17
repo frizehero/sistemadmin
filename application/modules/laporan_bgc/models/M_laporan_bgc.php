@@ -10,9 +10,14 @@ class M_laporan_bgc extends CI_Model {
 
 	function tampil_jobno($id)
 	{
-		$idnya=decrypt_url($id);
-		$this->db->where('bgc_jobno',$idnya);
+		$this->db->where('bgc_jobno',$id);
     	return $this->db->get('laporan_bgc')->result();
+	}
+
+	function tampil_jobmasuk($id)
+	{
+		$this->db->where('jobno',$id);
+    	return $this->db->get('jobmasuk')->row_array();
 	}
 
 	function tambahbg()
